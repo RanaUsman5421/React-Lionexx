@@ -60,7 +60,7 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="about-one relative block z-[1] bg-white">
+    <section ref={sectionRef} className="about-one relative block md:pt-20 lg:pt-32 z-[1] bg-white">
       <style>
         {`
           @keyframes aboutCircleSpin {
@@ -71,7 +71,7 @@ const AboutSection = () => {
       </style>
       <div className="container mx-auto w-full max-w-[1320px] px-[15px]">
         <div className="row grid grid-cols-1 gap-y-5 xl:grid-cols-2">
-          <div className="col-xl-6 order-2 xl:order-1">
+          <div className="col-xl-6 order-2 md:order-1">
             <div
               className="about-one__left relative block mr-[60px]"
               data-wow-delay="100ms"
@@ -82,7 +82,7 @@ const AboutSection = () => {
                   <img src={image} alt="" className="w-full !rounded-sm" />
                 </div>
 
-                <div className="about-one__review-and-experience-box absolute right-0 top-0 z-[2] bg-[var(--tanspot-base)] px-5 py-[30px] rounded-sm sm:rounded-[50px]">
+                <div className="about-one__review-and-experience-box absolute right-0 top-0 z-[2] bg-[var(--tanspot-base)] px-5 py-[30px] rounded-sm md:rounded-[50px]">
                   <div className="about-one__review-box relative block">
                     <ul className="about-one__review-list list-unstyled relative flex items-center">
                       <li className="relative block">
@@ -217,9 +217,9 @@ const AboutSection = () => {
             </div>
           </div>
 
-          <div className="col-xl-6 order-1 xl:order-2">
+          <div className="col-xl-6 order-1 md:order-2 !mt-5">
             <div className="about-one__right relative ml-[-10px] block">
-              <div className="section-title text-center xl:text-left sec-title-animation animation-style2 mb-[31px] mt-[-10px]">
+              <div className="section-title text-center md:text-left sec-title-animation animation-style2 mb-[31px] mt-[-10px]">
                 <div className="relative mb-3 inline-flex flex-wrap items-center gap-[10px]">
                   <span className="block w-10 border border-dashed border-[#f78134]"></span>
                   <div className="absolute left-2 top-[-4px] rotate-180">

@@ -1619,7 +1619,7 @@
 
     .about-one__right {
         max-width: 630px;
-        margin: 30px auto 0;
+        margin: 50px auto 0;
     }
 }
 
@@ -1669,7 +1669,10 @@
         border-radius: 20px;
     }
 
-
+    .about-one__right {
+        margin-left: 0;
+        margin-top: 50px;
+    }
 
     .about-one__point {
         flex-direction: column;
