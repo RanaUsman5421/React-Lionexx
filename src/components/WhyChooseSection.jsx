@@ -79,7 +79,7 @@ const WhyChooseSection = () => {
                     </div>
 
                     <h6 className="relative block  text-[18px] font-semibold uppercase leading-[18px] text-[#f78134]">
-                      Why Choose Us
+                      Contact Us
                     </h6>
                     <span className="block w-10 border border-dashed border-[#f78134]"></span>
                     <div className="absolute right-2 top-[-4px]">
@@ -105,7 +105,7 @@ const WhyChooseSection = () => {
                 </p>
 
                 <div className="mb-[31px] mt-[37px]">
-                  <ul className="flex flex-col items-start gap-5 md:flex-row md:flex-wrap md:items-center">
+                  <ul className="flex flex-col items-start gap-5 md:flex-row md:items-center">
                     {features.map((feature) => (
                       <li
                         key={feature.title}

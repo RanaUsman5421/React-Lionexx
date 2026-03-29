@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import PageShell from "../components/PageShell";
 import ThmBtn from "../components/thmBtn";
+import { TrackingResultsSkeleton } from "../components/ui/AppSkeletons";
 import { Package2 } from 'lucide-react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faTruck,faLocationDot, faCheck, faCheckCircle, faShippingFast, faBoxOpen, faTruckLoading, faBuilding, faRoute, faWarehouse, faHandHolding, faFileAlt, faUser} from '@fortawesome/free-solid-svg-icons'
@@ -354,7 +355,9 @@ const Tracking = () => {
           `}
         </style>
         <div className="mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-8">
-          {packet ? (
+          {loading ? (
+            <TrackingResultsSkeleton />
+          ) : packet ? (
             <>
           <div
             className="mb-[30px] flex flex-col items-center justify-between gap-[30px] rounded-[6px] border border-[rgba(6,47,58,0.05)] bg-white px-5 py-[25px] shadow-[0_10px_40px_rgba(6,47,58,0.08)] min-[768px]:px-[35px] min-[768px]:py-[30px] min-[1200px]:flex-row min-[1200px]:text-left"

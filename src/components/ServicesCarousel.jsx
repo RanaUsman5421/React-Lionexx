@@ -27,7 +27,7 @@ const services = [
     icon: "icon-delivery-man",
     number: "03",
     title: "E-Commerce Delivery",
-    desc: "Secure warehouse facilities providing inventory storage, smart management systems, and efficient order fulfillment operations.",
+    desc: "Secure warehouse facilities providing inventory storage, smart management systems, and efficient order.",
     link: "/ecommerce-order-fullfillment",
   },
   {
@@ -35,7 +35,7 @@ const services = [
     icon: "icon-truck",
     number: "04",
     title: "3PL Fullfillment",
-    desc: "Partnered delivery networks expand reach, ensuring dependable parcel distribution through trusted logistics collaborations worldwide.",
+    desc: "Partnered delivery networks expand reach, ensuring dependable parcel distribution through trusted logistics collaborations.",
     link: "/3pl-services",
   },
   {
@@ -59,7 +59,7 @@ const services = [
     icon: "icon-worldwide-shipping",
     number: "07",
     title: "Overland Service",
-    desc: "Advanced AI automation optimizes routing, shipment processing, logistics planning, improving operational efficiency significantly.",
+    desc: "Advanced AI automation optimizes routing, shipment processing, logistics planning, improving operational efficiency.",
     link: "/overland",
   },
   {
@@ -67,7 +67,7 @@ const services = [
     icon: "icon-worldwide-shipping",
     number: "08",
     title: "Cargo Services",
-    desc: "Advanced AI automation optimizes routing, shipment processing, logistics planning, improving operational efficiency significantly.",
+    desc: "Advanced AI automation optimizes routing, shipment processing, logistics planning, improving operational efficiency.",
     link: "/cargo-service",
   },
   {
@@ -75,7 +75,7 @@ const services = [
     icon: "icon-worldwide-shipping",
     number: "09",
     title: "Smart AI Features",
-    desc: "Advanced AI automation optimizes routing, shipment processing, logistics planning, improving operational efficiency significantly.",
+    desc: "Advanced AI automation optimizes routing, shipment processing, logistics planning, improving operational efficiency.",
     link: "/smart-ai-service",
   },
 ];

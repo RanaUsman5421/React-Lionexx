@@ -52,7 +52,7 @@ const SkillsSection = () => {
 
       <section
         ref={ref}
-        className="relative z-[1] hidden overflow-hidden bg-[#f2f3f5] px-0 py-20 md:block md:py-[85px]"
+        className="relative z-[1] hidden overflow-hidden px-0 py-20 md:block bg-white md:py-[85px]"
       >
         <div className="mx-auto max-w-[1320px] px-[15px]">
           <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -106,7 +106,7 @@ const SkillsSection = () => {
                       <div className="mb-3 font-sans text-[20px] font-semibold capitalize leading-[30px] tracking-[1px] text-[#062f3a]">
                         {skill.label}
                       </div>
-                      <div className="relative h-[7px] w-full rounded-[6px] bg-black/10">
+                      <div className="relative h-[7px] w-full rounded-[6px] bg-white">
                         <motion.div
                           className="relative block h-[7px] rounded-[6px] bg-[#f78134]"
                           initial={{ width: 0 }}
