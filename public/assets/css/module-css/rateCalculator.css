@@ -1,0 +1,712 @@
+/*--------------------------------------------------------------
+# Rate Calculator CSS
+--------------------------------------------------------------*/
+
+:root {
+    --tanspot-orange: #F47F33;
+    --tanspot-orange-light: #ff9a5c;
+    --tanspot-orange-dark: #d66a28;
+    --tanspot-dark: #062f3a;
+    --tanspot-dark-light: #0a4a56;
+    --tanspot-white: #ffffff;
+    --tanspot-gray: #585b6b;
+    --tanspot-gray-light: #f4f5f9;
+}
+
+/* Rate Calculator One Section */
+.rate-calculator-one {
+    position: relative;
+    display: block;
+    padding: 85px 0 85px;
+    background-color: var(--tanspot-gray-light);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.rate-calculator-one__shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.03;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+
+.rate-calculator-one__wrapper {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--tanspot-white);
+    border-radius: 6px;
+    padding: 60px 50px;
+    box-shadow: 0 20px 60px rgba(6, 47, 58, 0.08);
+    overflow: visible;
+}
+
+.rate-calculator-one__wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--tanspot-orange), var(--tanspot-orange-light));
+    border-radius: 10px 0 0 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.rate-calculator-one__wrapper::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(244, 127, 51, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+/* Icon Box */
+.rate-calculator-one__icon-box {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 30px;
+    background: linear-gradient(135deg, var(--tanspot-orange), var(--tanspot-orange-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 40px rgba(244, 127, 51, 0.3);
+    z-index: 1;
+}
+
+.rate-calculator-one__icon-box::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border: 3px dashed var(--tanspot-orange);
+    border-radius: 50%;
+    animation: rotate-reverse 20s linear infinite;
+}
+
+.rate-calculator-one__icon-box span {
+    font-size: 40px;
+    color: var(--tanspot-white);
+}
+
+/* Inner Title */
+.rate-calculator-one .inner-title {
+    position: relative;
+    margin-bottom: 50px;
+    z-index: 1;
+}
+
+.rate-calculator-one .inner-title h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--tanspot-dark);
+    margin-bottom: 15px;
+}
+
+.rate-calculator-one .inner-title h2 span {
+    color: var(--tanspot-orange);
+}
+
+.rate-calculator-one .inner-title p {
+    font-size: 16px;
+    color: var(--tanspot-gray);
+}
+
+/* Rate Calculator Form */
+.rate-calculator-form {
+    position: relative;
+    z-index: 1;
+}
+
+.rate-calculator__input-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.rate-calculator__input-wrapper > .rate-calculator__input-group:nth-child(5) {
+    grid-column: span 2;
+}
+
+/* Input Group */
+.rate-calculator__input-group {
+    position: relative;
+    z-index: 1;
+}
+
+.rate-calculator__input-icon {
+    position: absolute;
+    top: 38px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--tanspot-orange), var(--tanspot-orange-dark));
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+/* Desktop hover */
+@media (hover: hover) {
+    .rate-calculator__input-group:hover .rate-calculator__input-icon {
+        transform: scale(1.1) rotate(5deg);
+        box-shadow: 0 8px 25px rgba(244, 127, 51, 0.4);
+    }
+}
+
+/* Mobile/touch focus */
+@media (hover: none) {
+    .rate-calculator__input-group:focus-within .rate-calculator__input-icon {
+        transform: scale(1.1) rotate(5deg);
+        box-shadow: 0 8px 25px rgba(244, 127, 51, 0.4);
+    }
+}
+
+.rate-calculator__input-icon span {
+    font-size: 22px;
+    color: var(--tanspot-white);
+}
+
+.rate-calculator__input-field {
+    position: relative;
+    padding-left: 80px;
+    z-index: 2;
+}
+
+.rate-calculator__input-field label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--tanspot-dark);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.rate-calculator__input-field select,
+.rate-calculator__input-field input {
+    width: 100%;
+    height: 60px;
+    padding: 0 25px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--tanspot-gray);
+    background: var(--tanspot-white);
+    border: 2px solid #e8e8e8;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 10;
+    appearance: none;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    padding-right: 50px;
+}
+
+/* Desktop hover */
+@media (hover: hover) {
+    .rate-calculator__input-field select:hover,
+    .rate-calculator__input-field input:hover {
+        border-color: var(--tanspot-orange);
+    }
+}
+
+/* Mobile/touch focus */
+.rate-calculator__input-field select:focus,
+.rate-calculator__input-field input:focus {
+    border-color: var(--tanspot-orange);
+    box-shadow: 0 10px 30px rgba(244, 127, 51, 0.1);
+    z-index: 100;
+}
+
+/* Ensure select dropdown appears above other elements */
+.rate-calculator__input-field select {
+    position: relative;
+    z-index: 10;
+}
+
+.rate-calculator__input-field select:focus {
+    z-index: 100;
+}
+
+.rate-calculator__input-field input::placeholder {
+    color: #a0a0a0;
+}
+
+/* Custom Select Arrow */
+.rate-calculator__input-field select {
+    appearance: none;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23585b6b' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+}
+
+/* Native Select Options Styling */
+.rate-calculator__input-field select option {
+    background-color: var(--tanspot-white);
+    color: var(--tanspot-gray);
+    padding: 12px 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+.rate-calculator__input-field select option:hover,
+.rate-calculator__input-field select option:focus,
+.rate-calculator__input-field select option:checked {
+    background-color: var(--tanspot-orange);
+    color: var(--tanspot-white);
+}
+
+/* Input Border Animation */
+.rate-calculator__input-border {
+    position: absolute;
+    bottom: 0;
+    left: 80px;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--tanspot-orange), var(--tanspot-orange-light));
+    border-radius: 0 0 15px 15px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    pointer-events: none;
+}
+
+/* Desktop hover */
+@media (hover: hover) {
+    .rate-calculator__input-group:hover .rate-calculator__input-border {
+        transform: scaleX(1);
+    }
+}
+
+/* Mobile/touch focus */
+.rate-calculator__input-field select:focus ~ .rate-calculator__input-border,
+.rate-calculator__input-field input:focus ~ .rate-calculator__input-border {
+    transform: scaleX(1);
+}
+
+/* Button */
+.rate-calculator__btn-wrapper {
+    text-align: center;
+}
+
+.rate-calculator__btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 50px;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--tanspot-white);
+    background: linear-gradient(135deg, var(--tanspot-orange), var(--tanspot-orange-dark));
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+
+
+/* Mobile/touch active */
+@media (hover: none) {
+    .rate-calculator__btn:active {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 40px rgba(244, 127, 51, 0.4);
+    }
+}
+
+.rate-calculator__btn span {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+/* Desktop hover */
+@media (hover: hover) {
+    .rate-calculator__btn:hover span {
+        background: var(--tanspot-white);
+        color: var(--tanspot-orange);
+        transform: rotate(360deg);
+    }
+}
+
+/* Mobile/touch active */
+@media (hover: none) {
+    .rate-calculator__btn:active span {
+        background: var(--tanspot-white);
+        color: var(--tanspot-orange);
+    }
+}
+
+/* Result Display */
+.rate-calculator__result {
+    position: relative;
+    margin-top: 50px;
+    padding: 40px;
+    background: linear-gradient(135deg, var(--tanspot-dark), var(--tanspot-dark-light));
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.rate-calculator__result::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(244, 127, 51, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.rate-calculator__result::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(244, 127, 51, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.rate-calculator__result-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    z-index: 1;
+}
+
+.rate-calculator__result-icon {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--tanspot-orange), var(--tanspot-orange-light));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(244, 127, 51, 0.4);
+}
+
+.rate-calculator__result-icon span {
+    font-size: 35px;
+    color: var(--tanspot-white);
+}
+
+.rate-calculator__result-content {
+    flex: 1;
+}
+
+.rate-calculator__result-content h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.rate-calculator__result-price {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.rate-calculator__result-price .currency {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--tanspot-orange);
+}
+
+.rate-calculator__result-price span:not(.currency) {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--tanspot-white);
+    line-height: 1;
+}
+
+.rate-calculator__result-details {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.rate-calculator__result-details span {
+    color: var(--tanspot-orange-light);
+    font-weight: 600;
+}
+
+/* Result Decoration Dots */
+.rate-calculator__result-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.rate-calculator__result-dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--tanspot-orange);
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.rate-calculator__result-dot--1 {
+    top: 20px;
+    left: 20px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.rate-calculator__result-dot--2 {
+    top: 50%;
+    right: 30px;
+    width: 15px;
+    height: 15px;
+    animation: pulse 2s ease-in-out infinite 0.5s;
+}
+
+.rate-calculator__result-dot--3 {
+    bottom: 20px;
+    right: 20px;
+    animation: pulse 2s ease-in-out infinite 1s;
+}
+
+/* Features Section */
+.rate-features {
+    padding: 80px 0 80px;
+    background: var(--tanspot-white);
+}
+
+.rate-features__single {
+    text-align: center;
+    padding: 50px 30px;
+    background: var(--tanspot-white);
+    border-radius: 6px;
+    box-shadow: 0 10px 50px rgba(6, 47, 58, 0.05);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.rate-features__single::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--tanspot-orange), var(--tanspot-orange-light));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+/* Desktop hover */
+@media (hover: hover) {
+    .rate-features__single:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 60px rgba(6, 47, 58, 0.1);
+    }
+
+    .rate-features__single:hover::before {
+        transform: scaleX(1);
+    }
+
+    .rate-features__single:hover .rate-features__icon {
+        background: linear-gradient(135deg, var(--tanspot-orange), var(--tanspot-orange-dark));
+        transform: scale(1.1) rotate(5deg);
+    }
+
+    .rate-features__single:hover .rate-features__icon span {
+        color: var(--tanspot-white);
+    }
+}
+
+/* Mobile/touch active */
+@media (hover: none) {
+    .rate-features__single:active {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 60px rgba(6, 47, 58, 0.1);
+    }
+
+    .rate-features__single:active::before {
+        transform: scaleX(1);
+    }
+}
+
+.rate-features__icon {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 25px;
+    background: linear-gradient(135deg, rgba(244, 127, 51, 0.1), rgba(244, 127, 51, 0.05));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+.rate-features__icon span {
+    font-size: 40px;
+    color: var(--tanspot-orange);
+    transition: color 0.4s ease;
+}
+
+.rate-features__single h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--tanspot-dark);
+    margin-bottom: 15px;
+}
+
+.rate-features__single p {
+    font-size: 15px;
+    line-height: 26px;
+    color: var(--tanspot-gray);
+}
+
+/* Animations */
+@keyframes rotate-reverse {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.8;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .rate-calculator-one {
+        padding: 80px 0 80px;
+    }
+
+    .rate-calculator-one__wrapper {
+        padding: 40px 30px;
+    }
+
+    .rate-calculator__input-wrapper {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .rate-calculator__input-wrapper > .rate-calculator__input-group:nth-child(5) {
+        grid-column: span 1;
+    }
+
+    .rate-calculator-one .inner-title h2 {
+        font-size: 28px;
+    }
+
+    .rate-calculator__result-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .rate-calculator__result-price span:not(.currency) {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 575px) {
+    .rate-calculator-one__wrapper {
+        padding: 30px 20px;
+    }
+
+    .rate-calculator-one .inner-title h2 {
+        font-size: 24px;
+    }
+
+    .rate-calculator__input-icon {
+        width: 45px;
+        height: 45px;
+        left: 15px;
+        top: 35px;
+    }
+
+    .rate-calculator__input-icon span {
+        font-size: 18px;
+    }
+
+    .rate-calculator__input-field {
+        padding-left: 70px;
+    }
+
+    .rate-calculator__input-field select,
+    .rate-calculator__input-field input {
+        height: 55px;
+        padding: 0 15px;
+    }
+
+    .rate-calculator__btn {
+        width: 100%;
+        justify-content: center;
+        padding: 16px 30px;
+    }
+
+    .rate-features__single {
+        padding: 40px 20px;
+    }
+}
+
+
+

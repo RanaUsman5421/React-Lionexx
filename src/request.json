@@ -1,0 +1,82 @@
+{
+  "info": {
+    "_postman_id": "d1e2f3a4-b5c6-7890-1122-aabbccddeeff",
+    "name": "Lionex Seller Signup API (Unique Data 3)",
+    "description": "Third unique dataset for signup testing",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Seller Signup - Unique Test 3",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            { "key": "fullName", "value": "Bilal Ahmed", "type": "text" },
+            { "key": "email", "value": "bilal.ahmed99317@gmail.com", "type": "text" },
+            { "key": "phoneNumber", "value": "03334567891", "type": "text" },
+            { "key": "country", "value": "Pakistan", "type": "text" },
+            { "key": "password", "value": "Pass@45678", "type": "text" },
+            { "key": "confirmPassword", "value": "Pass@45678", "type": "text" },
+
+            { "key": "userName", "value": "bilal_user_99317", "type": "text" },
+            { "key": "displayName", "value": "bilal_user_99317", "type": "text" },
+
+            { "key": "fatherName", "value": "Ahmed Raza", "type": "text" },
+            { "key": "cnic", "value": "37405-1239876-4", "type": "text" },
+            { "key": "dob", "value": "1997-03-10", "type": "text" },
+            { "key": "city", "value": "Faisalabad", "type": "text" },
+            { "key": "address", "value": "Peoples Colony Block A", "type": "text" },
+            { "key": "referenceNumber", "value": "REF99317", "type": "text" },
+            { "key": "religion", "value": "Islam", "type": "text" },
+            { "key": "gender", "value": "Male", "type": "text" },
+
+            { "key": "accountHolderName", "value": "Bilal Ahmed", "type": "text" },
+            { "key": "accountNumber", "value": "6677889900", "type": "text" },
+            { "key": "ibanNumber", "value": "PK45MCBL0000005544332211", "type": "text" },
+            { "key": "bankName", "value": "Meezan Bank", "type": "text" },
+
+            { "key": "paymentInWeek", "value": "2", "type": "text" },
+            { "key": "detailsCorrect", "value": "true", "type": "text" },
+            { "key": "agreeTerms", "value": "true", "type": "text" },
+            { "key": "comingFrom", "value": "mobile_app", "type": "text" },
+
+            { "key": "profession", "value": "seller", "type": "text" },
+            { "key": "profession", "value": "warehouse_manager", "type": "text" },
+
+            { "key": "payableDaysNames", "value": "Monday", "type": "text" },
+            { "key": "payableDaysNames", "value": "Thursday", "type": "text" },
+
+            { "key": "profile", "type": "file", "src": "" },
+            { "key": "selfie", "type": "file", "src": "" },
+            { "key": "cnicFront", "type": "file", "src": "" },
+            { "key": "cnicBack", "type": "file", "src": "" },
+            { "key": "bankProof", "type": "file", "src": "" },
+
+            { "key": "businessPhotos", "type": "file", "src": "" },
+            { "key": "businessPhotos", "type": "file", "src": "" }
+          ]
+        },
+        "url": {
+          "raw": "https://helper.lionexcourier.com/api/v2/auth/seller/admin/signup/special/adminseller/request",
+          "protocol": "https",
+          "host": ["helper", "lionexcourier", "com"],
+          "path": [
+            "api",
+            "v2",
+            "auth",
+            "seller",
+            "admin",
+            "signup",
+            "special",
+            "adminseller",
+            "request"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

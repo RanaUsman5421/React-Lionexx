@@ -1,0 +1,1005 @@
+.tracking-div{
+    display: grid;
+    grid-template-columns: minmax(280px, 640px);
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    gap: 10px;
+    margin-top: 50px;
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.tracking-div input{
+    padding: 12px;
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin: 10px 0 20px;
+    box-sizing: border-box;
+}
+
+.tracking-div button{
+    outline: none;
+    border: none;
+    padding: 3px 10px;
+}
+
+.tracking-form-status{
+    margin: 6px 0 0;
+    min-height: 20px;
+    font-size: 14px;
+    color: var(--tanspot-white);
+}
+
+.tracking-div input::placeholder{
+    color: #999;
+}
+
+.tracking-data{
+    background: linear-gradient(180deg, #fff8f4 0%, #ffffff 100%);
+    padding: 60px 0 80px;
+}
+
+.tracking-data--hidden{
+    display: none;
+}
+
+/* ============================================
+   TRACKING HEADER CARD
+   ============================================ */
+.tracking-header-card {
+    background: var(--tanspot-white);
+    border-radius: 6px;
+    box-shadow: 0 10px 40px rgba(6, 47, 58, 0.08);
+    padding: 30px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(6, 47, 58, 0.05);
+}
+
+.tracking-header-card__left {
+    flex: 1;
+}
+
+.tracking-status-badge {
+    display: inline-block;
+    padding: 8px 18px;
+    background: var(--tanspot-base);
+    color: var(--tanspot-white);
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+}
+
+.tracking-id {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--tanspot-black);
+    margin: 0 0 10px;
+    line-height: 1.3;
+}
+
+.tracking-eta {
+    font-size: 15px;
+    color: var(--tanspot-gray);
+    margin: 0;
+}
+
+.tracking-eta strong {
+    color: var(--tanspot-base);
+    font-weight: 600;
+}
+
+.tracking-header-card__right {
+    flex: 1;
+}
+
+/* Route Visual */
+.tracking-route-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+}
+
+.route-point {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 100px;
+}
+
+.route-point .route-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--tanspot-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: var(--tanspot-base);
+    margin-bottom: 10px;
+}
+
+.route-point.destination .route-icon {
+    background: rgba(253, 85, 35, 0.15);
+    color: var(--tanspot-base);
+}
+
+.route-point .route-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--tanspot-gray);
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.route-point .route-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--tanspot-black);
+}
+
+.route-connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    padding: 0 10px;
+    position: relative;
+}
+
+.connector-line {
+    width: 100%;
+    height: 3px;
+    background: var(--tanspot-base);
+    border-radius: 6px;
+    position: relative;
+}
+
+.connector-line::before,
+.connector-line::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.connector-line::before {
+    left: 0;
+    background: var(--tanspot-base);
+}
+
+.connector-line::after {
+    right: 0;
+    background: var(--tanspot-base);
+}
+
+.connector-truck {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--tanspot-white);
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    font-size: 16px;
+    color: var(--tanspot-base);
+    animation: truckMove 2s ease-in-out infinite;
+}
+
+@keyframes truckMove {
+    0%, 100% { transform: translate(-50%, -50%) translateX(-20px); }
+    50% { transform: translate(-50%, -50%) translateX(20px); }
+}
+
+/* ============================================
+   MAIN CONTENT GRID
+   ============================================ */
+.tracking-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 30px;
+    align-items: start;
+}
+
+.tracking-timeline-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.tracking-details-column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* ============================================
+   TIMELINE CARD
+   ============================================ */
+.timeline-card {
+    background: var(--tanspot-white);
+    border-radius: 6px;
+    box-shadow: 0 10px 40px rgba(6, 47, 58, 0.08);
+    padding: 30px;
+    border: 1px solid rgba(6, 47, 58, 0.05);
+}
+
+.timeline-card__title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--tanspot-black);
+    margin: 0 0 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--tanspot-primary);
+}
+
+.vertical-timeline {
+    position: relative;
+    padding-left: 40px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 35px;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-item:last-child .marker-line {
+    display: none;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -40px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.marker-dot {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--tanspot-primary);
+    border: 3px solid rgba(6, 47, 58, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: var(--tanspot-gray);
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.timeline-item.is-complete .marker-dot {
+    background: var(--tanspot-base);
+    border-color: var(--tanspot-base);
+    color: var(--tanspot-white);
+}
+
+.timeline-item.is-active .marker-dot {
+    background: var(--tanspot-base);
+    border-color: var(--tanspot-base);
+    color: var(--tanspot-white);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(253, 85, 35, 0.4); }
+    50% { box-shadow: 0 0 0 12px rgba(253, 85, 35, 0); }
+}
+
+.marker-line {
+    width: 2px;
+    flex: 1;
+    background: rgba(6, 47, 58, 0.1);
+    margin-top: 8px;
+    min-height: 30px;
+}
+
+.timeline-item.is-complete .marker-line {
+    background: var(--tanspot-base);
+}
+
+.timeline-content h4 {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--tanspot-black);
+    margin: 0 0 6px;
+}
+
+.timeline-item.is-active .timeline-content h4 {
+    color: var(--tanspot-base);
+}
+
+.timeline-date {
+    font-size: 13px;
+    color: var(--tanspot-gray);
+    margin: 0 0 6px;
+    font-weight: 500;
+}
+
+.timeline-desc {
+    font-size: 13px;
+    color: var(--tanspot-gray);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ============================================
+   HISTORY CARD
+   ============================================ */
+.history-card {
+    background: var(--tanspot-white);
+    border-radius: 6px;
+    box-shadow: 0 10px 40px rgba(6, 47, 58, 0.08);
+    overflow: hidden;
+    border: 1px solid rgba(6, 47, 58, 0.05);
+}
+
+.history-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    background: var(--tanspot-black);
+    color: var(--tanspot-white);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.history-card__header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    color: var(--tanspot-white);
+}
+
+.events-count {
+    font-size: 13px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 5px 12px;
+    border-radius: 6px;
+}
+
+.history-card .tracking-history__list {
+    list-style: none;
+    height: fit-content;
+    margin: 0;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.history-card .tracking-history__list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 13px 15px;
+    border-bottom: 1px solid rgba(6, 47, 58, 0.05);
+    transition: background 0.3s ease;
+}
+
+.history-card .tracking-history__list li:hover {
+    background: rgba(244, 245, 249, 0.5);
+}
+
+.history-card .tracking-history__list li:nth-child(even) {
+    background: rgba(244, 245, 249, 0.4);
+}
+
+.history-card .tracking-history__list li:nth-child(even):hover {
+    background: rgba(244, 245, 249, 0.7);
+}
+
+.history-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(253, 85, 35, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--tanspot-base);
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.history-details {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.history-details p {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--tanspot-black);
+    margin: 0 0 4px;
+}
+
+.history-details time {
+    font-size: 12px;
+    color: var(--tanspot-gray);
+}
+
+/* ============================================
+   DETAILS CARDS
+   ============================================ */
+.details-card {
+    background: var(--tanspot-white);
+    border-radius: 6px;
+    box-shadow: 0 10px 40px rgba(6, 47, 58, 0.08);
+    overflow: hidden;
+    border: 1px solid rgba(6, 47, 58, 0.05);
+}
+
+.details-card__header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 22px 25px;
+    background: var(--tanspot-black);
+    color: var(--tanspot-white);
+}
+
+.details-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    background: rgba(253, 85, 35, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--tanspot-base);
+    font-size: 16px;
+}
+
+.details-card__header h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0;
+    color: var(--tanspot-white);
+}
+
+.details-card__content {
+    padding: 25px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(6, 47, 58, 0.06);
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    font-size: 13px;
+    color: var(--tanspot-gray);
+    font-weight: 500;
+}
+
+.detail-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--tanspot-black);
+    text-align: right;
+}
+
+.detail-value.status-active {
+    color: var(--tanspot-base);
+    background: rgba(253, 85, 35, 0.1);
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+/* Consignee Info */
+.consignee-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.consignee-avatar {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--tanspot-base) 0%, #e06a2a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: var(--tanspot-white);
+    flex-shrink: 0;
+}
+
+.consignee-details h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--tanspot-black);
+    margin: 0 0 8px;
+}
+
+.consignee-details p {
+    font-size: 13px;
+    color: var(--tanspot-gray);
+    margin: 0 0 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.consignee-details p i {
+    color: var(--tanspot-base);
+    width: 16px;
+}
+
+/* ============================================
+   QUICK ACTIONS CARD
+   ============================================ */
+.quick-actions-card {
+    background: linear-gradient(135deg, var(--tanspot-black) 0%, #0a3d4a 100%);
+    border-radius: 6px;
+    padding: 30px;
+    text-align: center;
+    color: var(--tanspot-white);
+}
+
+.quick-actions-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 10px;
+    color: var(--tanspot-white);
+}
+
+.quick-actions-card p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0 25px;
+    line-height: 1.6;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 25px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.action-btn.primary {
+    background: var(--tanspot-base);
+    color: var(--tanspot-white);
+}
+
+.action-btn.primary:hover {
+    background: #e06a2a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(253, 85, 35, 0.3);
+}
+
+.action-btn.secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--tanspot-white);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.action-btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+@media (max-width: 1199px) {
+    .tracking-content-grid {
+        grid-template-columns: 1fr 320px;
+    }
+    
+    .tracking-header-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .tracking-header-card__right {
+        width: 100%;
+    }
+    
+    .tracking-route-visual {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 991px) {
+    .tracking-data {
+        padding: 50px 0 60px;
+    }
+    
+    .tracking-content-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tracking-details-column {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .details-card {
+        flex: 1;
+        min-width: 280px;
+    }
+    
+    .quick-actions-card {
+        width: 100%;
+    }
+    
+    .tracking-id {
+        font-size: 24px;
+    }
+    
+    .route-point {
+        min-width: 80px;
+    }
+    
+    .route-point .route-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 15px;
+    }
+    
+    .route-point .route-value {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 767px) {
+    .tracking-data {
+        padding: 40px 0 50px;
+    }
+    
+    .tracking-header-card {
+        padding: 25px 20px;
+        border-radius: 6px;
+    }
+    
+    .tracking-id {
+        font-size: 20px;
+    }
+    
+    .tracking-status-badge {
+        padding: 6px 14px;
+        font-size: 11px;
+    }
+    
+    /* Keep route visual horizontal on mobile */
+    .tracking-route-visual {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 8px;
+    }
+    
+    .route-point {
+        flex-direction: column;
+        min-width: auto;
+        text-align: center;
+    }
+    
+    .route-point .route-icon {
+        margin-bottom: 8px;
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+    
+    .route-point .route-label {
+        display: block;
+        font-size: 9px;
+    }
+    
+    .route-point .route-value {
+        font-size: 11px;
+    }
+    
+    .route-connector {
+        padding: 0 5px;
+        flex: 1;
+    }
+    
+    .connector-line {
+        width: 100%;
+        height: 2px;
+        margin: 0;
+    }
+
+    
+    .connector-truck {
+        transform: translate(-50%, -50%);
+    }
+    
+    @keyframes truckMove {
+        0%, 100% { transform: translate(-50%, -50%) translateX(-10px); }
+        50% { transform: translate(-50%, -50%) translateX(10px); }
+    }
+    
+    .timeline-card,
+    .history-card {
+        border-radius: 6px;
+    }
+    
+    .vertical-timeline {
+        padding-left: 35px;
+    }
+    
+    .marker-dot {
+        width: 30px;
+        height: 30px;
+        font-size: 10px;
+    }
+    
+    .timeline-content h4 {
+        font-size: 15px;
+    }
+    
+    .timeline-date,
+    .timeline-desc {
+        font-size: 12px;
+    }
+    
+    .history-card .tracking-history__list li {
+        padding: 15px 5px;
+    }
+    
+    .history-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 12px;
+    }
+    
+    .details-card__header {
+        padding: 18px 20px;
+    }
+    
+    .details-card__content {
+        padding: 20px;
+    }
+    
+    .detail-row {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .detail-value {
+        text-align: left;
+    }
+    
+    .consignee-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .quick-actions-card {
+        padding: 25px 20px;
+    }
+    
+    .action-buttons {
+        gap: 10px;
+    }
+    
+    .action-btn {
+        padding: 12px 20px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tracking-header-card {
+        gap: 20px;
+    }
+    
+    .tracking-id {
+        font-size: 18px;
+    }
+    
+    .timeline-card__title {
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+    
+    .vertical-timeline {
+        padding-left: 30px;
+    }
+    
+    .timeline-marker {
+        left: -30px;
+    }
+    
+    .marker-dot {
+        width: 26px;
+        height: 26px;
+    }
+    
+    .details-card {
+        min-width: 100%;
+    }
+}
+
+/* Custom scrollbar for history list */
+.history-card .tracking-history__list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.history-card .tracking-history__list::-webkit-scrollbar-track {
+    background: var(--tanspot-primary);
+}
+
+.history-card .tracking-history__list::-webkit-scrollbar-thumb {
+    background: var(--tanspot-base);
+    border-radius: 6px;
+}
+
+.history-card .tracking-history__list::-webkit-scrollbar-thumb:hover {
+    background: #e06a2a;
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@media print {
+    /* Hide all page elements except tracking data */
+    body {
+        background: #fff !important;
+    }
+
+    .custom-cursor,
+    .custom-cursor__cursor,
+    .custom-cursor__cursor-two,
+    .loader,
+    .js-preloader,
+    .chat-icon,
+    #chat-popup,
+    .xs-sidebar-group,
+    .main-header,
+    .main-menu,
+    .page-header,
+    .page-header__bg,
+    .thm-breadcrumb__inner,
+    .tracking-div,
+    #trackingIdInput,
+    #trackOrderBtn,
+    .tracking-form-status,
+    .site-footer,
+    .site-footer__shape-bg,
+    .site-footer__top,
+    .site-footer__middle,
+    .site-footer__bottom,
+    .mobile-nav__wrapper,
+    .search-popup,
+    .scroll-to-top,
+    .quick-actions-card {
+        display: none !important;
+    }
+
+    /* Force show tracking section */
+    .tracking-data,
+    .tracking-data * {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .tracking-data--hidden,
+    .tracking-data--hidden * {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    /* Show tracking section */
+    .tracking-data {
+        padding: 30px 20px !important;
+        background: #fff !important;
+        margin: 0 !important;
+    }
+
+    /* Reset card styles for print */
+    .tracking-header-card,
+    .timeline-card,
+    .history-card,
+    .details-card {
+        display: block !important;
+        visibility: visible !important;
+        box-shadow: none !important;
+        border: 1px solid #ccc !important;
+        margin-bottom: 20px !important;
+        page-break-inside: avoid;
+        background: #fff !important;
+    }
+
+    /* Ensure content displays correctly */
+    .tracking-content-grid,
+    .tracking-timeline-column,
+    .tracking-details-column,
+    .tracking-header-card__left,
+    .tracking-header-card__right,
+    .tracking-route-visual,
+    .vertical-timeline,
+    .timeline-item,
+    .timeline-marker,
+    .timeline-content,
+    .tracking-history__list,
+    .tracking-history__list li,
+    .history-icon,
+    .history-details,
+    .details-card__content,
+    .detail-row,
+    .consignee-info,
+    .consignee-avatar,
+    .consignee-details {
+        display: block !important;
+        visibility: visible !important;
+    }
+
+    /* Timeline adjustments */
+    .vertical-timeline {
+        padding-left: 30px;
+    }
+
+    .timeline-item,
+    .tracking-history__list li {
+        page-break-inside: avoid;
+    }
+
+    /* Print-specific header */
+    .tracking-header-card {
+        display: flex !important;
+        background: #f5f5f5 !important;
+        border-radius: 6px !important;
+    }
+
+    /* Ensure colors print correctly */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+}
+
+
