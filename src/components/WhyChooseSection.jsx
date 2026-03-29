@@ -130,25 +130,7 @@ const WhyChooseSection = () => {
                   </ul>
                 </div>
 
-                <div className="relative block">
-                  <ul className="relative block">
-                    {checks.map((item) => (
-                      <li
-                        key={item}
-                        className="flex items-center gap-[10px] [&:not(:first-child)]:mt-[10px]"
-                      >
-                        <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#f78134] text-[10px] text-white">
-                          <span className="fas fa-check"></span>
-                        </div>
-                        <div className="flex-1">
-                          <p className="text-[16px] font-medium leading-[26px] text-[#062f3a]">
-                            {item}
-                          </p>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                
 
                 <div className="mt-[33px]">
                   <ThmBtn as={Link} to="/contact">

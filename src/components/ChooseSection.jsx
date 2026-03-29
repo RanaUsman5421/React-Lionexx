@@ -60,7 +60,7 @@ const ChooseCard = ({ title, icon, side }) => {
         </div>
         <h4
           className={`max-w-[140px] font-['poppins',sans-serif] text-[20px] font-semibold leading-[1.2] text-[#062f3a] text-left ${
-            isLeft ? "text-left" : "text-right"
+            isLeft ? "text-left" : "text-left"
           }`}
         >
           {title}
@@ -112,7 +112,7 @@ const ChooseSection = () => {
               </div>
 
         <div className="grid items-center gap-8 lg:grid-cols-[1fr_minmax(320px,520px)_1fr] lg:gap-6 xl:gap-10">
-          <div className="order-2 flex flex-col gap-6 lg:order-1 lg:items-end lg:gap-10">
+          <div className="order-1 flex flex-col gap-6 sm:grid sm:grid-cols-2 lg:order-1 lg:flex lg:items-end lg:gap-10">
             {chooseItems.left.map((item, index) => (
               <ChooseCard
                 key={`${item.title}-${index}`}
@@ -134,7 +134,7 @@ const ChooseSection = () => {
             </div>
           </div>
 
-          <div className="order-3 flex flex-col gap-6 lg:items-start lg:gap-10">
+          <div className="order-3 flex flex-col gap-6 sm:grid sm:grid-cols-2 lg:flex lg:items-start lg:gap-10">
             {chooseItems.right.map((item, index) => (
               <ChooseCard
                 key={`${item.title}-${index}`}

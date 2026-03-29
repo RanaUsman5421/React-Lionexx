@@ -32,7 +32,7 @@ export const faqItems = [
 ];
 
 const FAQSection = () => {
-  const [openIndex, setOpenIndex] = useState(1);
+  const [openIndex, setOpenIndex] = useState(null);
 
   return (
     <>
@@ -133,9 +133,7 @@ const FAQSection = () => {
                         <button
                           type="button"
                           onClick={() => {
-                            if (!isOpen) {
-                              setOpenIndex(index);
-                            }
+                            setOpenIndex(isOpen ? null : index);
                           }}
                           className="relative block w-full cursor-pointer p-3 pr-[40px] text-left transition-all duration-200 sm:px-[25px] sm:pr-[70px]"
                           aria-expanded={isOpen}

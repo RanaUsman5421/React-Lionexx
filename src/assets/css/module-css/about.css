@@ -1591,7 +1591,7 @@
 }
 
 /* Responsive rules moved from responsive.css */
-@media only screen and (min-width: 1200px) and (max-width: 13000px) {
+@media only screen and (min-width: 1024px) {
     .about-one__left {
         max-width: 630px;
         margin: 0 auto 0;
@@ -1611,7 +1611,19 @@
     
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width: 640px) and (max-width: 767px) {
+    .about-one__left {
+        max-width: 630px;
+        margin: 0 auto 0;
+    }
+
+    .about-one__right {
+        max-width: 630px;
+        margin: 30px auto 0;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
     .about-one__left {
         max-width: 630px;
         margin: 0 auto 0;
@@ -1623,19 +1635,7 @@
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .about-one__left {
-        max-width: 630px;
-        margin: 0 auto 0;
-    }
-
-    .about-one__right {
-        max-width: 630px;
-        margin: 50px auto 0;
-    }
-}
-
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 639px) {
     .section-title__title {
         font-size: 30px;
     }
@@ -1669,10 +1669,7 @@
         border-radius: 20px;
     }
 
-    .about-one__right {
-        margin-left: 0;
-        margin-top: 50px;
-    }
+
 
     .about-one__point {
         flex-direction: column;

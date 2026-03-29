@@ -70,7 +70,7 @@ const CoverageFlexibilitySection = () => {
               <img
                 src={manImage}
                 alt="Delivery man"
-                className="w-full max-w-[460px] object-contain md:max-w-[620px] lg:max-w-[860px]"
+                className="w-full max-w-[460px] mb-[-50px] object-contain md:max-w-[620px] lg:max-w-[860px]"
               />
             </div>
 
@@ -91,11 +91,11 @@ const CoverageFlexibilitySection = () => {
                 readable content of a page when looking at its layout.
               </p>
 
-              <div className="mt-8 grid gap-4 pb-7 sm:grid-cols-3 md:mt-10 md:pb-8">
+              <div className="mt-8 grid gap-10 sm:gap-4 pb-7 sm:grid-cols-3 md:mt-10 md:pb-8">
                 {stats.map((item) => (
                   <div
                     key={item.label}
-                    className="relative flex aspect-square items-center justify-center rounded-[14px] bg-white px-4 py-5 text-center shadow-[0_18px_38px_rgba(93,38,0,0.16)] sm:px-5"
+                    className="relative flex aspect-square items-center justify-center rounded-sm bg-white px-4 py-5 text-center shadow-[0_18px_38px_rgba(93,38,0,0.16)] sm:px-5"
                   >
                     <div>
                       <div className="font-['Rubik',sans-serif] text-[38px] font-bold leading-none text-[#20243a] md:text-[44px]">

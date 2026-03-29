@@ -22,7 +22,7 @@ import Tooltip from "../components/Tooltip";
 const Home = () => {
   return (
     <>
-      <div className="overflow-x-clip overflow-y-visible">
+      <div className="overflow-y-visible lg:mb-[110px]">
         <section className="relative z-0 flex h-[70vh] w-full items-center overflow-visible bg-[#0F3340] sm:h-[80vh] md:h-screen md:min-h-[90vh] lg:pb-0">
           <style>
             {`
@@ -111,7 +111,7 @@ const Home = () => {
               />
             </div>
           </div>
-          <div className="absolute hidden bottom-[-60px] left-1/2 z-[500] lg:flex -translate-x-1/2 w-[92%] flex-wrap items-center justify-center gap-3 rounded-sm bg-white p-3 shadow-lg sm:w-[88%] sm:gap-4 sm:p-4 lg:w-[80%] lg:flex-nowrap lg:justify-around opacity-[92%]">
+          <div className="absolute hidden bottom-[-90px] left-1/2 z-[500] lg:flex -translate-x-1/2 w-[92%] flex-wrap items-center justify-center gap-3 rounded-sm bg-white p-3 shadow-lg sm:w-[88%] sm:gap-4 sm:p-4 lg:w-[80%] lg:flex-nowrap lg:justify-around opacity-[92%]">
             <img
               src="/assets/images/resources/Leopards Logo.png"
               alt="Client"
