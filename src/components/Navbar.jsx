@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, Search, X, ChevronRight } from "lucide-react";
 import ThmBtn from "./thmBtn";
+import logo from "../assets/images/resources/Robot Logo.png";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -45,7 +46,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="min-w-0 flex-shrink">
           <img
-            src="/assets/images/resources/Lionex-logo.webp"
+            src={logo}
             alt="Lionex"
             className="h-8 w-auto max-w-full sm:h-9 lg:h-9"
           />

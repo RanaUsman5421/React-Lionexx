@@ -105,7 +105,7 @@ const Home = () => {
               style={{ backgroundImage: `url${heroBgImage}` }}
             >
               <img
-                className="w-[50%] h-[50%] md:w-[60%] md:h-[60%] lg:w-[50%] lg:h-[50%] xl:w-[70%] xl:h-[70%] 2xl:w-[75%] 2xl:h-[75%] object-contain relative z-40 animate-[aiFloat_3s_ease-in-out_infinite]"
+                className="w-[50%] h-[50%] md:w-[60%] md:h-[60%] lg:w-[50%] lg:h-[50%] xl:w-[60%] xl:h-[70%] 2xl:w-[75%] 2xl:h-[75%] object-contain relative z-40 animate-[aiFloat_3s_ease-in-out_infinite]"
                 src={AiImage}
                 alt="AI Robot"
               />
