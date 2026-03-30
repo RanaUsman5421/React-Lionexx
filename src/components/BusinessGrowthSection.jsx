@@ -1,3 +1,6 @@
+import { useState } from "react";
+import ThmBtn from "./thmBtn";
+
 const comparisonRows = [
   {
     otherFeature: "Choose Any Best Courier",
@@ -205,6 +208,9 @@ const StatusCell = ({ ok, label }) => (
 );
 
 const BusinessGrowthSection = () => {
+  const [showAllRows, setShowAllRows] = useState(false);
+  const visibleRows = showAllRows ? comparisonRows : comparisonRows.slice(0, 5);
+
   return (
     <section className="bg-white px-2 py-[30px] min-[480px]:px-3 md:px-5">
       <div className="mx-auto max-w-[1280px]">
@@ -233,7 +239,7 @@ const BusinessGrowthSection = () => {
           </div>
 
           <div className="grid gap-[2px] bg-[rgba(233,238,249,0.7)] p-[2px] min-[480px]:gap-[3px] min-[480px]:p-[3px] min-[768px]:gap-[4px] min-[768px]:p-[4px]">
-            {comparisonRows.map((row) => (
+            {visibleRows.map((row) => (
               <div
                 key={row.otherFeature}
                 className="grid grid-cols-[1.3fr_1fr_1fr] items-stretch gap-[2px] rounded-[16px] bg-transparent"
@@ -268,6 +274,17 @@ const BusinessGrowthSection = () => {
             ))}
           </div>
         </div>
+
+        {!showAllRows ? (
+          <div className="mt-6 flex justify-center">
+            <ThmBtn
+              type="button"
+              onClick={() => setShowAllRows(true)}
+            >
+              Load More
+            </ThmBtn>
+          </div>
+        ) : null}
       </div>
     </section>
   );

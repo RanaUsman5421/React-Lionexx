@@ -85,21 +85,7 @@ const Contact = () => {
       <section className="relative block pb-20 xl:pb-[120px]">
         <div className="mx-auto max-w-[1320px] px-[15px]">
           <div className="relative block rounded-[6px] bg-[#062f3a] px-[15px] py-[30px] md:px-[50px] md:py-[60px]">
-            <div className="grid grid-cols-1 gap-y-[50px] xl:grid-cols-2">
-              <div>
-                <div className="relative block xl:ml-[60px] xl:mr-[10px]">
-                  <iframe
-                    className="relative block h-[523px] w-full rounded-[6px] border-none"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403.9588622034235!2d74.39552177442152!3d31.442799450972554!2m3!1f0!3f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391905f6a9438d8f%3A0x149c1779a564afb0!2sLionex%20Courier!5e0!3m2!1sen!2s!4v1773309729747!5m2!1sen!2s"
-                    style={{ border: 0 }}
-                    allowFullScreen=""
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Lionex Courier Location"
-                  ></iframe>
-                </div>
-              </div>
-
+            <div className="grid grid-cols-1 gap-y-[50px]">
               <div>
                 <div className="relative block xl:ml-5 xl:mr-10">
                   <h3 className="mb-[26px] font-sans text-[35px] font-medium leading-[1.2] text-white md:text-[45px]">
@@ -164,7 +150,7 @@ const Contact = () => {
                             className="relative block h-[175px] w-full rounded-[6px] border-none bg-white/[0.03] px-5 pb-[30px] pt-[15px] text-[14px] font-normal text-white/70 outline-none placeholder:text-white/70"
                           ></textarea>
                         </div>
-                        <div className="relative block">
+                        <div className="relative flex justify-center">
                           <ThmBtn
                             type="submit"
                             className="border-none before:!bg-[#062f3a] after:!bg-[#062f3a]"

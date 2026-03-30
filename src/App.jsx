@@ -12,8 +12,8 @@ import {
   HomePageSkeleton,
   PageContentSkeleton,
 } from "./components/ui/AppSkeletons";
+import AboutCarrotSection from "./components/AboutCarrotSection";
 
-const AboutSection = lazy(() => import("./components/AboutSection"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 const Contact = lazy(() => import("./pages/Contact"));
@@ -50,7 +50,7 @@ function AppRoutes() {
           path="/about"
           element={
             <PageShell title="About Us" subtitle="About Us">
-              <AboutSection />
+              <AboutCarrotSection />
             </PageShell>
           }
         />

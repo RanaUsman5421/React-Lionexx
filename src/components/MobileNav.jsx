@@ -208,23 +208,23 @@ const MobileNav = () => {
         <div className="my-[18px] flex flex-wrap gap-[10px]">
           <Link
             to="/tracking"
-            className="min-w-0 flex-1 justify-center bg-green-500 px-2 py-3 text-sm text-white transition-all duration-300 hover:bg-green-600 group relative z-[1] inline-flex cursor-pointer items-center gap-[7px] overflow-hidden rounded-[6px] border-0 pb-[5px] pl-[15px] pr-[8px] pt-[5px] align-middle text-[14px] font-normal capitalize leading-[17px] outline-none ease-linear appearance-none max-[575px]:w-full before:absolute before:left-0 before:top-0 before:-z-[1] before:h-0 before:w-1/2 before:bg-[#062f3a] before:opacity-0 before:invisible before:content-[''] before:transition-all before:duration-[400ms] before:ease-in-out after:absolute after:bottom-0 after:right-0 after:-z-[1] after:h-0 after:w-1/2 after:bg-[#062f3a] after:opacity-0 after:invisible after:content-[''] after:transition-all after:duration-[400ms] after:ease-in-out hover:text-white hover:before:h-full hover:before:w-full hover:before:visible hover:before:opacity-100 hover:after:h-full hover:after:w-full hover:after:visible hover:after:opacity-100"
+            className="shrink-0 px-5 py-2 bg-green-500 text-sm text-white transition-all duration-300 hover:bg-green-600 group relative z-[1] inline-flex cursor-pointer items-center gap-[7px] overflow-hidden rounded-sm border-0 align-middle text-[14px] font-normal capitalize leading-[17px] outline-none ease-linear appearance-none before:absolute before:left-0 before:top-0 before:-z-[1] before:h-0 before:w-1/2 before:bg-[#062f3a] before:opacity-0 before:invisible before:content-[''] before:transition-all before:duration-[400ms] before:ease-in-out after:absolute after:bottom-0 after:right-0 after:-z-[1] after:h-0 after:w-1/2 after:bg-[#062f3a] after:opacity-0 after:invisible after:content-[''] after:transition-all after:duration-[400ms] after:ease-in-out hover:text-white hover:before:h-full hover:before:w-full hover:before:visible hover:before:opacity-100 hover:after:h-full hover:after:w-full hover:after:visible hover:after:opacity-100"
           >
             <img
               src="/assets/images/resources/Tracking Portal PNG Logo.webp"
               alt="Track"
-              className="h-5 w-auto shrink-0"
+              className="w-auto h-5"
             />
             Live Track
           </Link>
           <Link
-            to="/login"
-            className="min-w-0 flex-1 justify-center px-2 py-3 text-sm group relative z-[1] inline-flex cursor-pointer items-center gap-[7px] overflow-hidden rounded-[6px] border-0 bg-[#f78134] pb-[5px] pl-[15px] pr-[8px] pt-[5px] align-middle text-[14px] font-normal capitalize leading-[17px] text-white outline-none transition-all duration-500 ease-linear appearance-none max-[575px]:w-full before:absolute before:left-0 before:top-0 before:-z-[1] before:h-0 before:w-1/2 before:bg-[#062f3a] before:opacity-0 before:invisible before:content-[''] before:transition-all before:duration-[400ms] before:ease-in-out after:absolute after:bottom-0 after:right-0 after:-z-[1] after:h-0 after:w-1/2 after:bg-[#062f3a] after:opacity-0 after:invisible after:content-[''] after:transition-all after:duration-[400ms] after:ease-in-out hover:text-white hover:before:h-full hover:before:w-full hover:before:visible hover:before:opacity-100 hover:after:h-full hover:after:w-full hover:after:visible hover:after:opacity-100"
+            to="https://portal.lionexcourier.com/login"
+            className="shrink-0 text-sm group relative z-[1] inline-flex cursor-pointer items-center gap-[7px] overflow-hidden rounded-sm border-0 bg-[#f78134] pb-[5px] pl-[15px] pr-[8px] pt-[5px] align-middle text-[14px] font-normal capitalize leading-[17px] text-white outline-none transition-all duration-500 ease-linear appearance-none before:absolute before:left-0 before:top-0 before:-z-[1] before:h-0 before:w-1/2 before:bg-[#062f3a] before:opacity-0 before:invisible before:content-[''] before:transition-all before:duration-[400ms] before:ease-in-out after:absolute after:bottom-0 after:right-0 after:-z-[1] after:h-0 after:w-1/2 after:bg-[#062f3a] after:opacity-0 after:invisible after:content-[''] after:transition-all after:duration-[400ms] after:ease-in-out hover:text-white hover:before:h-full hover:before:w-full hover:before:visible hover:before:opacity-100 hover:after:h-full hover:after:w-full hover:after:visible hover:after:opacity-100"
           >
             <img
               src="/assets/images/resources/My Account Portal PNG Logo.webp"
               alt="Account"
-              className="h-5 w-5 shrink-0"
+              className="w-5 h-5"
             />
             My Account
           </Link>

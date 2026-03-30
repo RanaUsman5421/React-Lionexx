@@ -7,7 +7,7 @@ import {faFacebook,faTwitter,faPinterestP, faInstagram, faWhatsapp, faTiktok} fr
 
 const Footer = () => {
   return (
-    <footer className="relative block overflow-hidden bg-[#062f3a] z-[1]">
+    <footer className="relative mt-10 block overflow-hidden bg-[#062f3a] z-[1]">
         <div
           className="absolute inset-0 -z-[1] bg-cover bg-center bg-no-repeat opacity-[0.05]"
           style={{ backgroundImage: `url(${bgImage})` }}

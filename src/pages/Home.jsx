@@ -1,4 +1,4 @@
-import AboutSection from "../components/AboutSection";
+import AboutCarrotSection from "../components/AboutCarrotSection";
 import BusinessGrowthSection from "../components/BusinessGrowthSection";
 import BlogPreviews from "../components/BlogPreviews";
 import ChooseSection from "../components/ChooseSection";
@@ -17,7 +17,6 @@ import bgImage from "../assets/images/backgrounds/Home-web page-Liones.png";
 import "@fortawesome/fontawesome-free/css/all.css";
 import heroBgImage from "../assets/images/backgrounds/Home-web page-Liones.png";
 import "../index.css";
-import Tooltip from "../components/Tooltip";
 
 const Home = () => {
   return (
@@ -58,7 +57,7 @@ const Home = () => {
                   NETWORK
                 </span>
               </h1>
-              <p className="!mt-2 text-left sm:max-w-md text-xs md:mx-0 md:text-md lg:text-sm xl:text-[15px] text-white max-w-2xl lg:mx-0">
+              <p className="!mt-2 text-left sm:max-w-md text-xs md:mx-0 md:text-md lg:text-sm xl:text-[15px] text-white max-w-xs lg:mx-0">
                 Lionex is Pakistan's first AI-powered courier. Fast, reliable
                 deliveries with smart automation, real-time tracking, and full
                 WhatsApp support for modern eCommerce.
@@ -140,7 +139,7 @@ const Home = () => {
           </div>
         </section>
       </div>
-      <AboutSection />
+      <AboutCarrotSection />
       <ChooseSection />
       <BusinessGrowthSection />
       <SlidingTextSection />

@@ -7,7 +7,7 @@ const FAQ = () => {
       title="FAQ"
       subtitle="Quick answers to common shipping and delivery questions."
     >
-      <FAQSection />
+      <FAQSection className="mt-10" />
     </PageShell>
   );
 };

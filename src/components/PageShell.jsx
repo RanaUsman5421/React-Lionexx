@@ -11,7 +11,7 @@ const PageShell = ({ title, subtitle, headerContent, children }) => {
         ></div>
 
         <div className="mx-auto flex justify-between w-full max-w-[1320px] px-10 sm:px-10 lg:px-16 xl:px-10 2xl:px-0">
-          <div className="relative z-[15] block px-0 py-[80px] min-[768px]:py-[150px]">
+          <div className="relative z-[15] block px-0 py-[80px]">
             <h3 className="mb-[14px] text-[30px] font-semibold leading-[40px] text-white min-[768px]:text-[60px] min-[768px]:leading-[1em]">
               {title}
             </h3>
@@ -38,13 +38,6 @@ const PageShell = ({ title, subtitle, headerContent, children }) => {
             {headerContent ? (
               <div className="mt-6 max-w-[620px]">{headerContent}</div>
             ) : null}
-          </div>
-          <div className="absolute bottom-0 right-0 hidden min-[768px]:block">
-            <img
-              src="/assets/images/resources/page-header-img-1.png"
-              alt=""
-              className="w-[75%]"
-            />
           </div>
         </div>
       </section>

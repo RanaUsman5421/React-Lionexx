@@ -1631,7 +1631,7 @@
 
     .about-one__right {
         max-width: 630px;
-        margin: 50px auto 0;
+        margin: 0px auto 0;
     }
 }
 
@@ -1667,11 +1667,6 @@
 
     .about-one__img img {
         border-radius: 20px;
-    }
-
-    .about-one__right {
-        margin-left: 0;
-        margin-top: 50px;
     }
 
     .about-one__point {

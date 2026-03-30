@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { Menu, Search, X, ChevronRight } from "lucide-react";
-import ThmBtn from "./thmBtn";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, ChevronRight } from "lucide-react";
 import logo from "../assets/images/resources/Robot Logo.png";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const { pathname } = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,6 +38,13 @@ const Navbar = () => {
     window.dispatchEvent(new CustomEvent("lionex-info-sidebar-toggle"));
   };
 
+  const desktopLinkClass = (isActive) =>
+    `relative py-2 transition-colors after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-[#f78134] after:transition-all after:duration-300 after:content-[''] ${
+      isActive
+        ? "after:w-full"
+        : "hover:text-lionex-primary after:w-0 hover:after:w-full"
+    }`;
+
   return (
     <header
       className={`fixed left-1/2 top-4 z-50 w-[calc(100%-24px)] max-w-[calc(100%-24px)] -translate-x-1/2 rounded-sm border border-gray-300 bg-white/95 shadow-lg transition-all duration-300 backdrop-blur-md sm:w-[90%] sm:max-w-[90%] ${scrolled ? "shadow-2xl ring-1 ring-gray-100/50" : ""}`}
@@ -60,7 +67,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/"
-              className="hover:text-lionex-primary transition-colors py-2"
+              className={desktopLinkClass(pathname === "/")}
             >
               Home
             </Link>
@@ -68,7 +75,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/about"
-              className="hover:text-lionex-primary transition-colors py-2"
+              className={desktopLinkClass(pathname === "/about")}
             >
               About
             </Link>
@@ -76,7 +83,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/contact"
-              className="hover:text-lionex-primary transition-colors py-2"
+              className={desktopLinkClass(pathname === "/contact")}
             >
               Contact
             </Link>
@@ -84,7 +91,16 @@ const Navbar = () => {
 
           {/* Services Dropdown */}
           <li className="relative group">
-            <span className="flex items-center gap-1 hover:text-lionex-primary cursor-pointer py-2">
+            <span
+              className={desktopLinkClass(
+                [
+                  "/nation-wide",
+                  "/cash-on-delivery",
+                  "/ecommerce-order-fullfillment",
+                  "/3pl-services",
+                ].includes(pathname)
+              ) + " flex cursor-pointer items-center gap-1"}
+            >
               Services
               <svg
                 className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
@@ -142,7 +158,18 @@ const Navbar = () => {
 
           {/* More Dropdown */}
           <li className="relative group">
-            <span className="flex items-center gap-1 hover:text-lionex-primary cursor-pointer py-2">
+            <span
+              className={desktopLinkClass(
+                [
+                  "/rateCalculator",
+                  "/invoice",
+                  "/smart-ai-service",
+                  "/blog",
+                  "/faq",
+                  "/testimonials",
+                ].includes(pathname)
+              ) + " flex cursor-pointer items-center gap-1"}
+            >
               More
               <svg
                 className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
@@ -165,15 +192,6 @@ const Navbar = () => {
                   className="flex items-center justify-between px-6 py-4 hover:bg-orange-50 hover:text-lionex-primary transition-colors border-b border-gray-50 last:border-b-0"
                 >
                   Rate Calculator
-                  <ChevronRight size={14} />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/invoice"
-                  className="flex items-center justify-between px-6 py-4 hover:bg-orange-50 hover:text-lionex-primary transition-colors border-b border-gray-50 last:border-b-0"
-                >
-                  Get Invoice
                   <ChevronRight size={14} />
                 </Link>
               </li>
@@ -243,7 +261,7 @@ const Navbar = () => {
             Live Track
           </Link>
           <Link
-            to="/login"
+            to="https://portal.lionexcourier.com/login"
             className="shrink-0 text-sm group relative z-[1] inline-flex cursor-pointer items-center gap-[7px] overflow-hidden rounded-sm border-0 bg-[#f78134] pb-[5px] pl-[15px] pr-[8px] pt-[5px] align-middle text-[14px] font-normal capitalize leading-[17px] text-white outline-none transition-all duration-500 ease-linear appearance-none before:absolute before:left-0 before:top-0 before:-z-[1] before:h-0 before:w-1/2 before:bg-[#062f3a] before:opacity-0 before:invisible before:content-[''] before:transition-all before:duration-[400ms] before:ease-in-out after:absolute after:bottom-0 after:right-0 after:-z-[1] after:h-0 after:w-1/2 after:bg-[#062f3a] after:opacity-0 after:invisible after:content-[''] after:transition-all after:duration-[400ms] after:ease-in-out hover:text-white hover:before:h-full hover:before:w-full hover:before:visible hover:before:opacity-100 hover:after:h-full hover:after:w-full hover:after:visible hover:after:opacity-100"
           >
             <img

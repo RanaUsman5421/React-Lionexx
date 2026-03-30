@@ -82,7 +82,7 @@ const Login = () => {
                 <div className="relative block pt-[25px] text-center">
                   <p>
                     Not registered yet?{" "}
-                    <Link to="/sign-up" className="font-medium text-[#f78134]">
+                    <Link to="https://portal.lionexcourier.com/signup" className="font-medium text-[#f78134]">
                       Create an Account
                     </Link>
                   </p>
