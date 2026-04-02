@@ -4,10 +4,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlane } from "@fortawesome/free-solid-svg-icons";
 import "swiper/css";
 import "swiper/css/pagination";
+import servicesTwoImage from "../assets/images/services/services-2.png";
+import servicesFourImage from "../assets/images/services/services-4.png";
+import servicesFiveImage from "../assets/images/services/services-5.png";
+import servicesSixImage from "../assets/images/services/services-6.png";
+import servicesOneImage from "../assets/images/services/services-one-1-1.jpg";
 
 const services = [
   {
-    image: "/assets/images/services/services-2.png",
+    image: servicesTwoImage,
     icon: "icon-worldwide-shipping",
     number: "01",
     title: "Nationwide Delivery",
@@ -15,7 +20,7 @@ const services = [
     link: "/nation-wide",
   },
   {
-    image: "/assets/images/services/services-2.png",
+    image: servicesTwoImage,
     icon: "icon-shipment",
     number: "02",
     title: "Cash on Delivery",
@@ -23,7 +28,7 @@ const services = [
     link: "/cash-on-delivery",
   },
   {
-    image: "/assets/images/services/services-2.png",
+    image: servicesTwoImage,
     icon: "icon-delivery-man",
     number: "03",
     title: "E-Commerce Delivery",
@@ -31,7 +36,7 @@ const services = [
     link: "/ecommerce-order-fullfillment",
   },
   {
-    image: "/assets/images/services/services-4.png",
+    image: servicesFourImage,
     icon: "icon-truck",
     number: "04",
     title: "3PL Fullfillment",
@@ -39,7 +44,7 @@ const services = [
     link: "/3pl-services",
   },
   {
-    image: "/assets/images/services/services-5.png",
+    image: servicesFiveImage,
     icon: "icon-shipment",
     number: "05",
     title: "Overnight Service",
@@ -47,7 +52,7 @@ const services = [
     link: "/overnight",
   },
   {
-    image: "/assets/images/services/services-6.png",
+    image: servicesSixImage,
     icon: "icon-delivery-man",
     number: "06",
     title: "Detain Service",
@@ -55,7 +60,7 @@ const services = [
     link: "/detain",
   },
   {
-    image: "/assets/images/services/services-one-1-1.jpg",
+    image: servicesOneImage,
     icon: "icon-worldwide-shipping",
     number: "07",
     title: "Overland Service",
@@ -63,7 +68,7 @@ const services = [
     link: "/overland",
   },
   {
-    image: "/assets/images/services/services-one-1-1.jpg",
+    image: servicesOneImage,
     icon: "icon-worldwide-shipping",
     number: "08",
     title: "Cargo Services",
@@ -71,7 +76,7 @@ const services = [
     link: "/cargo-service",
   },
   {
-    image: "/assets/images/services/services-one-1-1.jpg",
+    image: servicesOneImage,
     icon: "icon-worldwide-shipping",
     number: "09",
     title: "Smart AI Features",

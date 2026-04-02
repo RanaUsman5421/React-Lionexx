@@ -70,10 +70,10 @@ const AboutCarrotSection = () => {
   const [isChooseOpen, setIsChooseOpen] = useState(false);
 
   return (
-    <section className="bg-white px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+    <section className="bg-white !px-5 sm:px-6 lg:px-8 lg:py-16">
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_1.05fr] lg:items-center">
         <div>
-          <h2 className="font-['Rubik',sans-serif] text-4xl font-light uppercase leading-none tracking-tight text-[#1f2433] sm:text-5xl md:text-6xl">
+          <h2 className="font-['Poppins',sans-serif] text-4xl font-light uppercase leading-none tracking-tight text-[#1f2433] sm:text-5xl md:text-6xl">
             Your <span className="font-semibold text-[#f78134]">Trusted</span>
             <br />
             E-Commerce
@@ -103,7 +103,7 @@ const AboutCarrotSection = () => {
       </div>
 
       <div className="mx-auto mt-14 max-w-7xl">
-        <h3 className="text-center font-['Rubik',sans-serif] text-2xl font-semibold text-[#062f3a] sm:text-3xl">
+        <h3 className="text-center font-['Poppins',sans-serif] text-2xl font-semibold text-[#062f3a] sm:text-3xl">
           Some impressive numbers
         </h3>
 
@@ -130,7 +130,7 @@ const AboutCarrotSection = () => {
           className="flex w-full items-center justify-between gap-4 px-5 py-5 text-left transition-colors duration-300 hover:bg-[#f8fafc] sm:px-6"
         >
           <span className="font-['Rubik',sans-serif] text-lg font-semibold text-[#062f3a] sm:text-xl">
-            Why Choose Behoice?
+            Why Choose LionEx?
           </span>
 
           <span

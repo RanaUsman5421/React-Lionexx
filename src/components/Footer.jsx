@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import ThmBtn from "./thmBtn";
 import bgImage from "../assets/images/shapes/site-footer-shape-bg.png";
+import footerLogo from "../assets/images/resources/Just White PNG-10.webp";
 import {Phone,Mail,EarthLock} from 'lucide-react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faFacebook,faTwitter,faPinterestP, faInstagram, faWhatsapp, faTiktok} from '@fortawesome/free-brands-svg-icons'
@@ -56,7 +57,7 @@ const Footer = () => {
                   <div className="relative block">
                     <Link to="/">
                       <img
-                        src="/assets/images/resources/Just White PNG-10.webp"
+                        src={footerLogo}
                         alt=""
                         className="w-[130px]"
                       />
@@ -189,7 +190,7 @@ const Footer = () => {
             <div className="relative flex flex-wrap items-center justify-between px-0 pb-[25px] pt-[26px] text-center max-[1199px]:flex-col">
               <p className="mb-[10px] text-white/80 max-[1199px]:mb-[10px] xl:mb-0">
                 © Copywright 2026 by{" "}
-                <a href="https://lionexcourier.com/" className="font-semibold text-[#f78134] transition-all duration-500 ease-[ease] hover:text-white">LionEx Courier</a> All
+                <a href="https://lionexcourier.com/" className="font-semibold text-[#f78134] transition-all duration-500 ease-[ease] hover:text-white">LionEx Courier PVT LTD</a> All
                 Rights Reserved.
               </p>
               <ul className="flex flex-col items-center max-[1199px]:gap-[10px] xl:flex-row">
@@ -211,4 +212,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

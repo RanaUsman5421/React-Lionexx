@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlane } from "@fortawesome/free-solid-svg-icons";
+import faqImage from "../assets/images/resources/faq-one-img-1.jpg";
 
 export const faqItems = [
   {
@@ -96,7 +97,7 @@ const FAQSection = () => {
                 <div className="relative mr-0 block md:mr-0 xl:mr-[252px]">
                   <div className="relative block overflow-hidden rounded-[6px]">
                     <img
-                      src="/assets/images/resources/faq-one-img-1.jpg"
+                      src={faqImage}
                       alt=""
                       className="w-full rounded-[6px]"
                     />

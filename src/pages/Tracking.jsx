@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import PageShell from "../components/PageShell";
 import ThmBtn from "../components/thmBtn";
 import { TrackingResultsSkeleton } from "../components/ui/AppSkeletons";
@@ -52,6 +52,7 @@ const getStatusIcon = (status = "") => {
 };
 
 const Tracking = () => {
+  const { trackingNumber: trackingNumberParam } = useParams();
   const [trackingNumber, setTrackingNumber] = useState("");
   const [trackingData, setTrackingData] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -61,9 +62,14 @@ const Tracking = () => {
   const trackingDetails = packet?.["Tracking Detail"] || [];
   const currentStatus = packet?.booked_packet_status || "In Transit";
   const latestActivity = packet?.activity_date || "N/A";
+  const isDelivered = currentStatus.toLowerCase().includes("deliver");
 
-  const handleTrack = async () => {
-    const trimmedTrackingNumber = trackingNumber.trim();
+  const handleTrack = async (trackingNumberOverride) => {
+    const resolvedTrackingNumber =
+      typeof trackingNumberOverride === "string"
+        ? trackingNumberOverride
+        : trackingNumber;
+    const trimmedTrackingNumber = resolvedTrackingNumber.trim();
 
     if (!trimmedTrackingNumber) {
       setError("Please enter a tracking number.");
@@ -114,6 +120,18 @@ const Tracking = () => {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const trackingNumberFromUrl = (
+      trackingNumberParam || params.get("trackingNumber") || ""
+    ).trim();
+
+    if (trackingNumberFromUrl) {
+      setTrackingNumber(trackingNumberFromUrl);
+      handleTrack(trackingNumberFromUrl);
+    }
+  }, [trackingNumberParam]);
 
   const generatePDF = async (e) => {
     e.preventDefault();
@@ -371,9 +389,9 @@ const Tracking = () => {
                 Tracking ID: <span>{packet.track_number || trackingNumber}</span>
               </h2>
               <p className="m-0 text-[15px] text-[#6a6c6e]">
-                Estimated Delivery:{" "}
+                {isDelivered ? "Status: " : "Estimated Delivery: "}
                 <strong className="font-semibold text-[#f78134]">
-                  {latestActivity}
+                  {isDelivered ? "Delivered" : latestActivity}
                 </strong>
               </p>
             </div>

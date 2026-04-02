@@ -66,6 +66,7 @@ function AppRoutes() {
         <Route path="/faq" element={<FAQ />} />
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/tracking" element={<Tracking />} />
+        <Route path="/tracking/:trackingNumber" element={<Tracking />} />
         <Route path="/login" element={<Login />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/rateCalculator" element={<RateCalculator />} />

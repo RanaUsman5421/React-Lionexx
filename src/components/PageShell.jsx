@@ -1,3 +1,5 @@
+import pageHeaderBg from "../assets/images/backgrounds/page-header-bg.jpg";
+
 const PageShell = ({ title, subtitle, headerContent, children }) => {
   return (
     <>
@@ -5,8 +7,7 @@ const PageShell = ({ title, subtitle, headerContent, children }) => {
         <div
           className="absolute inset-0 -z-[1] bg-cover bg-center bg-no-repeat opacity-10"
           style={{
-            backgroundImage:
-              "url('/assets/images/backgrounds/page-header-bg.jpg')",
+            backgroundImage: `url(${pageHeaderBg})`,
           }}
         ></div>
 

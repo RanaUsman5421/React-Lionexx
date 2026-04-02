@@ -13,6 +13,8 @@ import { Link, useParams } from "react-router-dom";
 import PageShell from "../components/PageShell";
 import ThmBtn from "../components/thmBtn";
 import blogPosts from "../data/blogPosts";
+import commentOneImage from "../assets/images/blog/comment-1-1.jpg";
+import commentTwoImage from "../assets/images/blog/comment-1-2.jpg";
 
 const postContentById = {
   "mastering-last-mile": {
@@ -69,13 +71,13 @@ const comments = [
   {
     name: "Theresa Webb",
     date: "02 June 2024 at 03:30 pm",
-    image: "/assets/images/blog/comment-1-1.jpg",
+    image: commentOneImage,
     text: "The wise team always chooses better processes when they improve customer trust. Reliable communication and careful execution make every shipment feel more dependable.",
   },
   {
     name: "Cameron Williamson",
     date: "02 June 2024 at 03:30 pm",
-    image: "/assets/images/blog/comment-1-2.jpg",
+    image: commentTwoImage,
     text: "Operational discipline matters most when volume increases. The best logistics experiences come from teams that stay responsive, organized, and consistent at every step.",
   },
 ];

@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronRight } from "lucide-react";
 import logo from "../assets/images/resources/Robot Logo.png";
+import trackingPortalLogo from "../assets/images/resources/Tracking Portal PNG Logo.webp";
+import accountPortalLogo from "../assets/images/resources/My Account Portal PNG Logo.webp";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -254,7 +256,7 @@ const Navbar = () => {
             className="shrink-0 px-5 py-2 bg-green-500 text-sm text-white transition-all duration-300 hover:bg-green-600 group relative z-[1] inline-flex cursor-pointer items-center gap-[7px] overflow-hidden rounded-sm border-0 align-middle text-[14px] font-normal capitalize leading-[17px] outline-none ease-linear appearance-none before:absolute before:left-0 before:top-0 before:-z-[1] before:h-0 before:w-1/2 before:bg-[#062f3a] before:opacity-0 before:invisible before:content-[''] before:transition-all before:duration-[400ms] before:ease-in-out after:absolute after:bottom-0 after:right-0 after:-z-[1] after:h-0 after:w-1/2 after:bg-[#062f3a] after:opacity-0 after:invisible after:content-[''] after:transition-all after:duration-[400ms] after:ease-in-out hover:text-white hover:before:h-full hover:before:w-full hover:before:visible hover:before:opacity-100 hover:after:h-full hover:after:w-full hover:after:visible hover:after:opacity-100"
           >
             <img
-              src="/assets/images/resources/Tracking Portal PNG Logo.webp"
+              src={trackingPortalLogo}
               alt="Track"
               className="w-auto h-5"
             />
@@ -265,7 +267,7 @@ const Navbar = () => {
             className="shrink-0 text-sm group relative z-[1] inline-flex cursor-pointer items-center gap-[7px] overflow-hidden rounded-sm border-0 bg-[#f78134] pb-[5px] pl-[15px] pr-[8px] pt-[5px] align-middle text-[14px] font-normal capitalize leading-[17px] text-white outline-none transition-all duration-500 ease-linear appearance-none before:absolute before:left-0 before:top-0 before:-z-[1] before:h-0 before:w-1/2 before:bg-[#062f3a] before:opacity-0 before:invisible before:content-[''] before:transition-all before:duration-[400ms] before:ease-in-out after:absolute after:bottom-0 after:right-0 after:-z-[1] after:h-0 after:w-1/2 after:bg-[#062f3a] after:opacity-0 after:invisible after:content-[''] after:transition-all after:duration-[400ms] after:ease-in-out hover:text-white hover:before:h-full hover:before:w-full hover:before:visible hover:before:opacity-100 hover:after:h-full hover:after:w-full hover:after:visible hover:after:opacity-100"
           >
             <img
-              src="/assets/images/resources/My Account Portal PNG Logo.webp"
+              src={accountPortalLogo}
               alt="Account"
               className="w-5 h-5"
             />

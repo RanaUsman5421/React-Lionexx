@@ -1,6 +1,9 @@
 
 
 
+@import "./assets/css/flaticon.css";
+@import "./assets/css/font-awesome-all.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -85,7 +88,7 @@ main > div:first-child > section:first-child {
 
 @media (min-width: 640px) {
   main section {
-    padding: 3rem 0 0 0 !important;
+    padding: 3rem 0 1rem 0 !important;
   }
 }
 

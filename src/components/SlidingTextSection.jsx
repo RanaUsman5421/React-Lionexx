@@ -1,3 +1,5 @@
+import slidingTextIcon from "../assets/images/icon/sliding-text-icon-1.png";
+
 const slidingItems = [
   "AI POWERED",
   "Tracking",
@@ -37,7 +39,7 @@ const SlidingTextSection = () => {
                   >
                     <span>{item}</span>
                     <img
-                      src="/assets/images/icon/sliding-text-icon-1.png"
+                      src={slidingTextIcon}
                       alt=""
                       className="relative w-[30px] sm:w-[38px] md:w-auto"
                     />

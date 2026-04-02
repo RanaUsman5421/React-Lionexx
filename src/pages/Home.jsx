@@ -16,6 +16,13 @@ import AiImage from "../assets/images/resources/LionEx Robo Icon Logo.webp";
 import bgImage from "../assets/images/backgrounds/Home-web page-Liones.png";
 import "@fortawesome/fontawesome-free/css/all.css";
 import heroBgImage from "../assets/images/backgrounds/Home-web page-Liones.png";
+import heroOverlayImage from "../assets/images/blog/blog-list-1-2.jpg";
+import starImage from "../assets/images/resources/star.webp";
+import leopardsLogo from "../assets/images/resources/Leopards Logo.png";
+import mpCourierLogo from "../assets/images/resources/M&P Courier.png";
+import traxLogo from "../assets/images/resources/Trax.jpg";
+import tcsCourierLogo from "../assets/images/resources/TCS Courier.png";
+import barqRaftarLogo from "../assets/images/resources/Barq Raftar.webp";
 import "../index.css";
 
 const Home = () => {
@@ -36,7 +43,10 @@ const Home = () => {
               
           `}
           </style>
-          <div className="absolute inset-0 bg-[url('./assets/images/blog/blog-list-1-2.jpg')] bg-cover bg-center opacity-5 z-0"></div>
+          <div
+            className="absolute inset-0 z-0 bg-cover bg-center opacity-5"
+            style={{ backgroundImage: `url(${heroOverlayImage})` }}
+          ></div>
           <div
             className="fixed bottom-0 right-0 hidden md:block h-[50vh] w-[50vh] lg:h-[70vh] lg:w-[70vh] xl:h-[80vh] xl:w-[80vh] object-contain opacity-10 z-5 pointer-events-none"
             style={{
@@ -71,27 +81,27 @@ const Home = () => {
                 </ThmBtn>
                 <div className="flex gap-1 text-sm px-0 md:px-4 py-2 rounded-sm shadow-lg">
                   <img
-                    src="/assets/images/resources/star.webp"
+                    src={starImage}
                     alt="Star"
                     className="w-4 h-4"
                   />
                   <img
-                    src="/assets/images/resources/star.webp"
+                    src={starImage}
                     alt="Star"
                     className="w-4 h-4"
                   />
                   <img
-                    src="/assets/images/resources/star.webp"
+                    src={starImage}
                     alt="Star"
                     className="w-4 h-4"
                   />
                   <img
-                    src="/assets/images/resources/star.webp"
+                    src={starImage}
                     alt="Star"
                     className="w-4 h-4"
                   />
                   <img
-                    src="/assets/images/resources/star.webp"
+                    src={starImage}
                     alt="Star"
                     className="w-4 h-4"
                   />
@@ -112,27 +122,27 @@ const Home = () => {
           </div>
           <div className="absolute hidden bottom-[-90px] left-1/2 z-[500] lg:flex -translate-x-1/2 w-[92%] flex-wrap items-center justify-center gap-3 rounded-sm bg-white p-3 shadow-lg sm:w-[88%] sm:gap-4 sm:p-4 lg:w-[80%] lg:flex-nowrap lg:justify-around opacity-[92%]">
             <img
-              src="/assets/images/resources/Leopards Logo.png"
+              src={leopardsLogo}
               alt="Client"
               className="h-20 w-[calc(50%-0.375rem)] min-w-[120px] flex-1 border-[2px] border-red-700 rounded-bl-[32px] rounded-tr-[32px] object-cover sm:h-24 md:h-28 lg:h-[130px] lg:w-[130px] lg:flex-none lg:rounded-bl-[50px] lg:rounded-tr-[50px]"
             />
             <img
-              src="/assets/images/resources/M&P Courier.png"
+              src={mpCourierLogo}
               alt="Client"
               className="h-20 w-[calc(50%-0.375rem)] min-w-[120px] flex-1 border-[2px] border-red-700 rounded-bl-[32px] rounded-tr-[32px] object-cover sm:h-24 md:h-28 lg:h-[130px] lg:w-[130px] lg:flex-none lg:rounded-bl-[50px] lg:rounded-tr-[50px]"
             />
             <img
-              src="/assets/images/resources/Trax.jpg"
+              src={traxLogo}
               alt="Client"
               className="h-20 w-[calc(50%-0.375rem)] min-w-[120px] flex-1 border-[2px] border-red-700 rounded-bl-[32px] rounded-tr-[32px] object-cover sm:h-24 md:h-28 lg:h-[130px] lg:w-[130px] lg:flex-none lg:rounded-bl-[50px] lg:rounded-tr-[50px]"
             />
             <img
-              src="/assets/images/resources/TCS Courier.png"
+              src={tcsCourierLogo}
               alt="Client"
               className="h-20 w-[calc(50%-0.375rem)] min-w-[120px] flex-1 border-[2px] border-red-700 rounded-bl-[32px] rounded-tr-[32px] object-cover sm:h-24 md:h-28 lg:h-[130px] lg:w-[130px] lg:flex-none lg:rounded-bl-[50px] lg:rounded-tr-[50px]"
             />
             <img
-              src="/assets/images/resources/Barq Raftar.webp"
+              src={barqRaftarLogo}
               alt="Client"
               className="h-20 w-[calc(50%-0.375rem)] min-w-[120px] flex-1 border-[2px] border-red-700 rounded-bl-[32px] rounded-tr-[32px] object-cover sm:h-24 md:h-28 lg:h-[130px] lg:w-[130px] lg:flex-none lg:rounded-bl-[50px] lg:rounded-tr-[50px]"
             />

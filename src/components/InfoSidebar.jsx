@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ThmBtn from "./thmBtn";
+import sidebarLogo from "../assets/images/resources/logo-3.png";
 
 const InfoSidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -89,7 +90,7 @@ const InfoSidebar = () => {
             <div className="relative mb-[30px] max-w-[172px]">
               <Link to="/" onClick={closeSidebar}>
                 <img
-                  src="/assets/images/resources/logo-3.png"
+                  src={sidebarLogo}
                   alt=""
                   className="w-[100px]"
                 />

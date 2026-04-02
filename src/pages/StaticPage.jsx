@@ -4,6 +4,15 @@ import { useState } from "react";
 import PageShell from "../components/PageShell";
 import { faqItems } from "../components/FAQSection";
 import pages from "../data/pages";
+import serviceDetailsImage1 from "../assets/images/services/service-details-img-1.jpg";
+import serviceDetailsImage2 from "../assets/images/services/service-details-img-2.jpg";
+import serviceDetailsImage3 from "../assets/images/services/service-details-img-3.jpg";
+import serviceDetailsImage4 from "../assets/images/services/service-details-img-4.jpg";
+import serviceDetailsImage5 from "../assets/images/services/service-details-img-5.jpg";
+import serviceDetailsImage6 from "../assets/images/services/service-details-img-6.jpg";
+import serviceDetailsBoxImage1 from "../assets/images/services/service-details-img-box-img-1.jpg";
+import serviceDetailsBoxImage2 from "../assets/images/services/service-details-img-box-img-2.jpg";
+import serviceDetailsSidebarImage from "../assets/images/services/service-details-sidebar-img.png";
 
 const serviceRoutes = [
   { key: "nation-wide", title: "Nationwide Delivery", path: "/nation-wide" },
@@ -21,7 +30,7 @@ const serviceRoutes = [
 
 const serviceContent = {
   "nation-wide": {
-    image: "/assets/images/services/service-details-img-1.jpg",
+    image: serviceDetailsImage1,
     intro:
       "Lionex nationwide delivery connects businesses to customers across Pakistan with dependable pickups, optimized linehaul movement, and final-mile execution that supports consistent service at scale.",
     body:
@@ -34,19 +43,19 @@ const serviceContent = {
     ],
     cards: [
       {
-        image: "/assets/images/services/service-details-img-box-img-1.jpg",
+        image: serviceDetailsBoxImage1,
         title: "Quality Assured Service",
         text: "Coordinated hub operations and delivery checkpoints create a dependable shipping experience with fewer blind spots.",
       },
       {
-        image: "/assets/images/services/service-details-img-box-img-2.jpg",
+        image: serviceDetailsBoxImage2,
         title: "100% Delivery Reliability",
         text: "Better route planning and real-time tracking help teams keep customers informed and reduce delivery uncertainty.",
       },
     ],
   },
   "cash-on-delivery": {
-    image: "/assets/images/services/service-details-img-2.jpg",
+    image: serviceDetailsImage2,
     intro:
       "Lionex cash on delivery service helps merchants grow sales with reliable order fulfillment, verified delivery handling, and structured collection workflows that improve confidence for both seller and buyer.",
     body:
@@ -59,19 +68,19 @@ const serviceContent = {
     ],
     cards: [
       {
-        image: "/assets/images/services/service-details-img-box-img-1.jpg",
+        image: serviceDetailsBoxImage1,
         title: "Secure COD Handling",
         text: "Verified delivery and structured payment workflows support cleaner collections and fewer service disputes.",
       },
       {
-        image: "/assets/images/services/service-details-img-box-img-2.jpg",
+        image: serviceDetailsBoxImage2,
         title: "Merchant Confidence",
         text: "Clearer status reporting helps businesses track fulfillment, collections, and exceptions in one flow.",
       },
     ],
   },
   "ecommerce-order-fullfillment": {
-    image: "/assets/images/services/service-details-img-6.jpg",
+    image: serviceDetailsImage6,
     intro:
       "Lionex ecommerce fulfillment gives merchants a connected workflow for storage, order processing, packing, and dispatch. Inventory visibility and shipment coordination support faster fulfillment with fewer operational gaps.",
     body:
@@ -84,19 +93,19 @@ const serviceContent = {
     ],
     cards: [
       {
-        image: "/assets/images/services/service-details-img-box-img-1.jpg",
+        image: serviceDetailsBoxImage1,
         title: "Quality Assured Service",
         text: "Unified dashboards consolidate receiving, packing, and dispatch events so teams can respond faster with cleaner execution.",
       },
       {
-        image: "/assets/images/services/service-details-img-box-img-2.jpg",
+        image: serviceDetailsBoxImage2,
         title: "100% Delivery Reliability",
         text: "Coordinated fulfillment and courier handoff keeps orders moving with better visibility and fewer missed steps.",
       },
     ],
   },
   "3pl-services": {
-    image: "/assets/images/services/service-details-img-3.jpg",
+    image: serviceDetailsImage3,
     intro:
       "Lionex 3PL services help businesses outsource logistics operations while keeping the visibility needed to manage service quality, delivery performance, and growth across multiple channels.",
     body:
@@ -109,19 +118,19 @@ const serviceContent = {
     ],
     cards: [
       {
-        image: "/assets/images/services/service-details-img-box-img-1.jpg",
+        image: serviceDetailsBoxImage1,
         title: "Operational Flexibility",
         text: "Our 3PL setup adapts to changing order volumes while preserving structure, speed, and delivery oversight.",
       },
       {
-        image: "/assets/images/services/service-details-img-box-img-2.jpg",
+        image: serviceDetailsBoxImage2,
         title: "Reliable Support",
         text: "Coordinated logistics processes help brands stay responsive as fulfillment and distribution needs evolve.",
       },
     ],
   },
   overnight: {
-    image: "/assets/images/services/service-details-img-4.jpg",
+    image: serviceDetailsImage4,
     intro:
       "Lionex overnight service is designed for urgent shipments that require faster handling, tighter movement windows, and dependable coordination from pickup through final delivery.",
     body:
@@ -134,19 +143,19 @@ const serviceContent = {
     ],
     cards: [
       {
-        image: "/assets/images/services/service-details-img-box-img-1.jpg",
+        image: serviceDetailsBoxImage1,
         title: "Priority Dispatch",
         text: "Time-sensitive orders benefit from faster sorting, focused routing, and better service discipline.",
       },
       {
-        image: "/assets/images/services/service-details-img-box-img-2.jpg",
+        image: serviceDetailsBoxImage2,
         title: "Trusted Speed",
         text: "Reliable overnight coordination helps businesses deliver urgent shipments with more confidence.",
       },
     ],
   },
   detain: {
-    image: "/assets/images/services/service-details-img-5.jpg",
+    image: serviceDetailsImage5,
     intro:
       "Lionex detain service gives businesses a controlled way to hold shipments when delivery timing, routing decisions, or customer confirmation needs to change before completion.",
     body:
@@ -159,19 +168,19 @@ const serviceContent = {
     ],
     cards: [
       {
-        image: "/assets/images/services/service-details-img-box-img-1.jpg",
+        image: serviceDetailsBoxImage1,
         title: "Controlled Handling",
         text: "Detain workflows help operations teams manage route or customer changes without breaking visibility.",
       },
       {
-        image: "/assets/images/services/service-details-img-box-img-2.jpg",
+        image: serviceDetailsBoxImage2,
         title: "Clear Resolution Flow",
         text: "A structured holding process makes it easier to resume delivery once the correct action is confirmed.",
       },
     ],
   },
   "smart-ai-service": {
-    image: "/assets/images/services/service-details-img-7.jpg",
+    image: serviceDetailsImage6,
     intro:
       "Lionex AI automation improves logistics decision-making with smarter routing support, faster response workflows, and better operational visibility across high-volume delivery activity.",
     body:
@@ -184,12 +193,12 @@ const serviceContent = {
     ],
     cards: [
       {
-        image: "/assets/images/services/service-details-img-box-img-1.jpg",
+        image: serviceDetailsBoxImage1,
         title: "Smarter Operations",
         text: "Automation helps teams process information faster and act with more consistency across logistics workflows.",
       },
       {
-        image: "/assets/images/services/service-details-img-box-img-2.jpg",
+        image: serviceDetailsBoxImage2,
         title: "Better Visibility",
         text: "AI-supported insights help businesses identify issues sooner and improve service responsiveness.",
       },
@@ -273,7 +282,7 @@ const StaticPage = ({ pageKey }) => {
                   <div className="relative z-[1] block [clip-path:polygon(0_0,100%_0%,100%_82%,0%_100%)]">
                     <div className="relative block">
                       <img
-                        src="/assets/images/services/service-details-sidebar-img.png"
+                        src={serviceDetailsSidebarImage}
                         alt=""
                         className="mx-auto w-auto"
                       />

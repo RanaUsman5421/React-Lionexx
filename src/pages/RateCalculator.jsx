@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PageShell from "../components/PageShell";
 import ThmBtn from "../components/thmBtn";
+import rateCalculatorShape from "../assets/images/shapes/counter-one-bg-shape.png";
 
 const shipmentRates = {
   documents: 150,
@@ -81,7 +82,7 @@ const RateCalculator = () => {
         <div
           className="absolute inset-0 -z-[1] bg-center bg-no-repeat opacity-[0.03]"
           style={{
-            backgroundImage: "url('/assets/images/shapes/rate-calculator-shape.png')",
+            backgroundImage: `url(${rateCalculatorShape})`,
           }}
         ></div>
 
