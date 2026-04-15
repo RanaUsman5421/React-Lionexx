@@ -199,15 +199,6 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to="/smart-ai-service"
-                  className="flex items-center justify-between px-6 py-4 hover:text-lionex-primary transition-colors border-b border-gray-50 last:border-b-0"
-                >
-                  AI Automation
-                  <ChevronRight size={14} />
-                </Link>
-              </li>
-              <li>
-                <Link
                   to="/blog"
                   className="flex items-center justify-between px-6 py-4 hover:bg-orange-50 hover:text-lionex-primary transition-colors border-b border-gray-50 last:border-b-0"
                 >

@@ -10,16 +10,16 @@ import { faPlane } from "@fortawesome/free-solid-svg-icons";
 
 const chooseItems = {
   left: [
-    { title: "Water Installation", icon: waterIcon },
-    { title: "Air Heating Installation", icon: airHeatIcon },
-    { title: "Radiator Heating", icon: radiatorIcon },
-    { title: "Water Installation", icon: waterIcon },
+    { title: "Fully AI Powered System", icon: waterIcon },
+    { title: "Live Whatsapp Notifications", icon: airHeatIcon },
+    { title: "AI Auto Return Handling", icon: radiatorIcon },
+    { title: "Auto Reattempts", icon: waterIcon },
   ],
   right: [
-    { title: "Ceiling Installation", icon: ceilingIcon },
-    { title: "AC Conditioning", icon: acIcon },
-    { title: "Floor Heating", icon: floorHeatIcon },
-    { title: "Ceiling Installation", icon: ceilingIcon },
+    { title: "Smart Customer Support", icon: ceilingIcon },
+    { title: "Fast Payments Processing", icon: acIcon },
+    { title: "Detailed Return Reports", icon: floorHeatIcon },
+    { title: "Booking & Tracking via WhatsApp", icon: ceilingIcon },
   ],
 };
 
@@ -59,7 +59,7 @@ const ChooseCard = ({ title, icon, side }) => {
           />
         </div>
         <h4
-          className={`max-w-[140px] font-['poppins',sans-serif] text-[20px] font-semibold leading-[1.2] text-[#062f3a] text-left ${
+          className={`max-w-[140px] font-['poppins',sans-serif] text-[15px] font-semibold leading-[1.2] text-[#062f3a] text-left ${
             isLeft ? "text-left" : "text-left"
           }`}
         >
@@ -72,14 +72,14 @@ const ChooseCard = ({ title, icon, side }) => {
 
 const ChooseSection = () => {
   return (
-    <section className="relative overflow-hidden bg-white py-[90px] md:py-[110px]">
+    <section className="relative overflow-hidden bg-white py-5 my-5">
       <div className="pointer-events-none absolute inset-0 opacity-60">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(6,47,58,0.06)_1px,transparent_0)] [background-size:18px_18px]"></div>
         <div className="absolute left-[-140px] top-[120px] h-[360px] w-[360px] rounded-full bg-[#f78134]/8 blur-3xl"></div>
         <div className="absolute bottom-[40px] right-[-120px] h-[320px] w-[320px] rounded-full bg-[#062f3a]/6 blur-3xl"></div>
       </div>
 
-      <div className="relative mx-auto max-w-[1320px] px-5">
+      <div className="relative mx-auto px-5">
         <div className="section-title text-center sec-title-animation animation-style2 mb-[31px] mt-[-10px]">
                 <div className="relative mb-3 inline-flex flex-wrap items-center gap-[10px]">
                   <span className="block w-10 border border-dashed border-[#f78134]"></span>
@@ -102,7 +102,7 @@ const ChooseSection = () => {
                   </div>
                 </div>
 
-                <h3 className="section-title__title title-animation text-[46px] font-bold leading-[1.2]">
+                <h3 className="section-title__title title-animation text-[25px] sm:text-[46px] font-bold leading-[1.2]">
                   Our Expertise Stands in{" "}
                   <span className="text-[var(--tanspot-base)]">
                     <br />

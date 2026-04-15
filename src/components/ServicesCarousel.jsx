@@ -90,9 +90,9 @@ const serviceMask =
 
 const ServicesCarousel = () => {
   return (
-    <section className="bg-white pt-[75px] pb-[85px]">
-      <div className="container mx-auto px-4">
-        <div className="mx-auto mb-20 max-w-4xl text-center">
+    <section className="bg-white py-5 my-5">
+      <div className="px-4">
+        <div className="mx-auto mb-5 text-center">
           <div className="relative mb-3 inline-flex flex-wrap items-center gap-[10px]">
             <span className="block w-10 border border-dashed border-[#f78134]"></span>
             <div className="absolute left-2 top-[-4px] rotate-180">
@@ -113,7 +113,7 @@ const ServicesCarousel = () => {
               />
             </div>
           </div>
-          <h2 className="text-4xl font-black leading-tight text-[#062f3a] md:text-5xl lg:text-6xl">
+          <h2 className="text-[30px] font-black leading-tight text-[#062f3a] md:text-5xl lg:text-6xl">
             Provide Efficient Logistics <br className="hidden lg:block" />
             <span className="text-[#f78134]">Solutions Business</span>
           </h2>
@@ -128,8 +128,8 @@ const ServicesCarousel = () => {
             clickable: true,
             el: ".services-swiper-pagination",
             renderBullet: (_, className) =>
-              `<span class="${className} !mx-[5px] !my-0 !inline-flex !h-[18px] !w-[18px] items-center justify-center rounded-[6px] border-2 border-[rgba(6,47,58,0.7)] bg-transparent p-0 opacity-100 transition-all duration-100 delay-100 [&.swiper-pagination-bullet-active]:border-lionex-primary [&.swiper-pagination-bullet-active_.services-bullet-inner]:bg-lionex-primary">
-                <span class="services-bullet-inner block h-2 w-2 rounded-[6px] bg-[rgba(6,47,58,0.7)] transition-all duration-100 delay-100"></span>
+              `<span class="${className} !mx-[8px] !my-0 !inline-flex !h-[18px] !w-[18px] items-center justify-center rounded-full  !p-[2px] opacity-100 transition-all duration-300 ease-out hover:bg-[rgba(247,129,52,0.35)] [&.swiper-pagination-bullet-active]:!h-[18px] [&.swiper-pagination-bullet-active]:!w-[56px]">
+                <span class="services-bullet-inner block h-full w-full rounded-full bg-[#062f3a] transition-all duration-300 ease-out"></span>
               </span>`,
           }}
           breakpoints={{
@@ -186,7 +186,7 @@ const ServicesCarousel = () => {
                       </a>
                     </h4>
 
-                    <p className="mb-4 mt-4 text-base leading-[30px] text-[#6a6c6e]">
+                    <p className="mb-4 mt-4 text-base leading-1 text-[#6a6c6e]">
                       {service.desc}
                     </p>
 

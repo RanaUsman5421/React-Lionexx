@@ -59,11 +59,11 @@ const FAQSection = () => {
         `}
       </style>
 
-      <section className="relative z-[1] block overflow-hidden px-0 pb-20 pt-[38px] before:absolute before:inset-0 before:-z-[1] before:bg-[#d9dddb]/50 before:content-[''] md:pb-[120px]">
+      <section className="relative z-[1] block overflow-hidden px-0 py-5 my-5 before:absolute before:inset-0 before:-z-[1] before:bg-[#d9dddb]/50 before:content-['']">
         <div className="absolute left-[-70px] top-[-100px] z-[-1] h-[765px] w-[730px] rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,rgba(253,85,35,0.62)_0%,rgba(6,47,58,0)_100%)] opacity-40 blur-[120px]"></div>
         <div className="absolute bottom-[-255px] right-[100px] z-[-1] h-[765px] w-[730px] rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,rgba(253,85,35,0.62)_0%,rgba(6,47,58,0)_100%)] opacity-40 blur-[120px]"></div>
 
-        <div className="mx-auto max-w-[1320px] px-[15px]">
+        <div className="px-[15px]">
           <div className="grid grid-cols-1 gap-y-[50px] lg:grid-cols-12 lg:gap-x-6">
             <div className="lg:col-span-5 xl:col-span-6">
               <div className="relative block lg:mb-[60px] xl:mb-0">
@@ -88,7 +88,7 @@ const FAQSection = () => {
                       />
                     </div>
                   </div>
-                  <h3 className="font-sans text-[34px] font-bold leading-[1.2] text-[#062f3a] md:text-[40px]">
+                  <h3 className="font-sans text-[25px] font-bold leading-[1.2] text-[#062f3a] md:text-[40px]">
                     Frequently Asking{" "}
                     <span className="text-[#f78134]">Any Question</span>
                   </h3>

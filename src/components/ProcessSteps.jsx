@@ -4,23 +4,23 @@ import { faPlane } from "@fortawesome/free-solid-svg-icons";
 
 const steps = [
   {
-    icon: "icon-phone-call",
-    title: "discovery call",
+    icon: "icon-box1",
+    title: "Booked",
     desc: "Lionex makes delivery calls ensuring timely, smooth, accurate, and reliable shipments.",
   },
   {
-    icon: "icon-box1",
-    title: "Replenishment & Picking",
+    icon: "icon-truck",
+    title: "In Transit",
     desc: "Lionex manages replenishment and picking for accurate, organized, and timely orders.",
   },
   {
-    icon: "icon-packaging",
-    title: "Packaging & Distribution",
+    icon: "icon-data-warehouse",
+    title: "AI Working",
     desc: "Lionex ensures secure packaging and efficient distribution for fast, reliable deliveries nationwide.",
   },
   {
-    icon: "icon-truck",
-    title: "Transportation Process",
+    icon: "icon-delivery-man",
+    title: "Delivered",
     desc: "Lionex manages transportation process efficiently, ensuring safe, timely, and reliable deliveries.",
   },
 ];
@@ -50,13 +50,13 @@ const ProcessSteps = () => {
         `}
       </style>
 
-      <section className="relative z-[1] block bg-[#f2f3f5] px-0 pb-[50px] pt-20 md:pb-20 md:pt-[100px]">
+      <section className="relative z-[1] block bg-[#f2f3f5] px-0 py-5 my-5">
         <div
           className="absolute inset-0 z-[-1]  bg-cover bg-center bg-no-repeat opacity-[0.03]"
           style={{ backgroundImage: `url(${processImage})` }}
         ></div>
 
-        <div className="mx-auto max-w-[1320px] px-[15px]">
+        <div className="px-[15px]">
           <div className="mb-[52px] text-center">
             <div className="relative mb-3 inline-flex flex-wrap items-center gap-[10px]">
               <span className="block w-10 border border-dashed border-[#f78134]"></span>
@@ -78,7 +78,7 @@ const ProcessSteps = () => {
                 />
               </div>
             </div>
-            <h3 className="font-sans text-[34px] font-bold leading-[1.2] text-[#062f3a] md:text-[40px]">
+            <h3 className="font-sans text-[25px] font-bold leading-[1.2] text-[#062f3a] md:text-[40px]">
               Lionex delivers ecommerce shipments through <br />
               smart,{" "}
               <span className="text-[#f78134]">Efficient Automation</span>
@@ -107,7 +107,7 @@ const ProcessSteps = () => {
                   <h4 className="mt-5 font-sans text-[22px] font-bold capitalize leading-8 text-[#062f3a]">
                     {step.title}
                   </h4>
-                  <p className="mt-[15px] text-[15px] font-medium leading-[30px] text-[#797f7d]">
+                  <p className="mt-[5px] text-[15px] font-medium text-[#797f7d]">
                     {step.desc}
                   </p>
 

@@ -160,7 +160,7 @@ const MobileNav = () => {
                         }
                         className={`flex h-[30px] w-[30px] items-center justify-center bg-[#f78134] text-white transition-all duration-500 ${
                           expandedIndex === index
-                            ? "rotate-0 bg-white text-[#f78134]"
+                            ? "rotate-0 bg-[#062f3a] text-[#f78134]"
                             : "-rotate-90"
                         }`}
                       >

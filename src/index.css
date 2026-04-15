@@ -73,47 +73,7 @@ body *:not(i):not([class^="fa-"]):not([class*=" fa-"]):not([class^="fab"]):not([
 }
 
 .container {
-  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
-}
-
-main section {
-  margin: 0 !important;
-  padding: 2.5rem 0 0 0 !important;
-}
-
-main > div:first-child > section:first-child {
-  margin: 0;
-  padding: 0 !important;
-}
-
-@media (min-width: 640px) {
-  main section {
-    padding: 3rem 0 1rem 0 !important;
-  }
-}
-
-@media (min-width: 768px) {
-  main section {
-    padding: 3.5rem 0 0 0 !important;
-  }
-}
-
-@media (min-width: 1024px) {
-  main section {
-    padding: 4rem 0 0 0 !important;
-  }
-}
-
-@media (min-width: 1280px) {
-  main section {
-    padding: 4.5rem 0 0 0 !important;
-  }
-}
-
-@media (min-width: 1536px) {
-  main section {
-    padding: 5rem 0 0 0 !important;
-  }
+  @apply mx-auto px-4 sm:px-6 lg:px-8;
 }
 
 

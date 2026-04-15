@@ -214,7 +214,7 @@ const downloads = [
 
 const StaticPage = ({ pageKey }) => {
   const page = pages[pageKey];
-  const [openIndex, setOpenIndex] = useState(1);
+  const [openIndex, setOpenIndex] = useState(null);
 
   if (!page) {
     return (
@@ -238,11 +238,11 @@ const StaticPage = ({ pageKey }) => {
 
   return (
     <PageShell title={page.title} subtitle={page.subtitle}>
-      <section className="relative block py-[80px] lg:py-[85px]">
+      <section className="relative block py-[20px] lg:py-[85px]">
         <div className="mx-auto w-full max-w-[1320px] px-5 md:px-10 xl:px-[15px]">
           <div className="grid grid-cols-1 gap-y-10 lg:grid-cols-12 lg:gap-x-[30px]">
             <div className="order-2 lg:order-1 lg:col-span-5 xl:col-span-4">
-              <div className="relative mb-[60px] block lg:mb-0">
+              <div className="relative mb-[30px] block lg:mb-0">
                 <div className="block rounded-[6px] bg-[#eef4f5] px-[15px] pb-10 pt-[31px] min-[576px]:px-[35px]">
                   <h3 className="mb-[28px] font-['Rubik',sans-serif] text-[24px] font-bold leading-[34px] text-[#062f3a]">
                     Our Services
@@ -275,7 +275,7 @@ const StaticPage = ({ pageKey }) => {
                   </ul>
                 </div>
 
-                <div className="relative my-[30px] block overflow-hidden rounded-[6px] bg-[#eef4f5] pb-[47px] pt-[18px] text-center">
+                <div className="relative block overflow-hidden rounded-[6px] bg-[#eef4f5] pb-[17px] pt-[18px] text-center">
                   <div className="absolute inset-x-0 top-0 -z-[2] h-[305px] bg-[#f78134] [clip-path:polygon(0_0,100%_0%,100%_82%,0%_100%)] content-['']"></div>
                   <div className="absolute inset-x-0 top-0 -z-[1] h-[295px] bg-[#062f3a] [clip-path:polygon(0_0,100%_0%,100%_82%,0%_100%)] content-['']"></div>
 
@@ -305,51 +305,7 @@ const StaticPage = ({ pageKey }) => {
                   </div>
                 </div>
 
-                <div className="block rounded-[6px] bg-[#eef4f5] px-[15px] pb-10 pt-[31px] min-[576px]:px-[35px]">
-                  <h3 className="mb-[28px] font-['Rubik',sans-serif] text-[24px] font-bold leading-[34px] text-[#062f3a]">
-                    Download
-                  </h3>
-
-                  <div className="block">
-                    <ul className="list-none">
-                      {downloads.map((item, index) => (
-                        <li
-                          key={index}
-                          className={`flex items-center justify-between border-b border-[rgba(247,129,52,0.3)] py-[14px] leading-none ${
-                            index === 0 ? "pt-0" : ""
-                          } ${index === downloads.length - 1 ? "border-b-0 pb-0" : ""}`}
-                        >
-                          <div className="flex items-center">
-                            <div className="block">
-                              <FileText className="h-[45px] w-[45px] text-[#062f3a]" />
-                            </div>
-                            <div className="ml-[17px] block flex-1">
-                              <h2 className="font-['Rubik',sans-serif] text-[18px] font-semibold capitalize leading-[30px] text-[#062f3a]">
-                                <a href="#" className="transition-all duration-300 hover:text-[#f78134]">
-                                  {item.title}
-                                </a>
-                              </h2>
-                              <p className="text-[14px] font-normal capitalize leading-5 text-[#062f3a]">
-                                <a href="#" className="transition-all duration-300 hover:text-[#f78134]">
-                                  {item.label}
-                                </a>
-                              </p>
-                            </div>
-                          </div>
-
-                          <div className="block">
-                            <a
-                              href="#"
-                              className="flex h-[45px] w-[45px] items-center justify-center rounded-[6px] bg-[#f78134] text-white transition-all duration-500 hover:bg-[#062f3a]"
-                            >
-                              <Download className="h-5 w-5" />
-                            </a>
-                          </div>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+                
               </div>
             </div>
 
@@ -363,14 +319,14 @@ const StaticPage = ({ pageKey }) => {
                   />
                 </div>
 
-                <h3 className="mb-[30px] mt-[41px] font-['Rubik',sans-serif] text-[40px] font-bold leading-[50px] text-[#062f3a]">
+                <h3 className="my-3 font-['Rubik',sans-serif] text-[40px] font-bold leading-[50px] text-[#062f3a]">
                   {page.title}
                 </h3>
 
-                <p className="font-['Poppins',sans-serif] text-[20px] font-semibold leading-[30px] text-[#062f3a]">
+                <p className="font-['Poppins',sans-serif] text-[16px] font-semibold leading-[30px] text-[#062f3a]">
                   {content.intro}
                 </p>
-                <p className="mb-[41px] mt-5 text-[16px] leading-[30px] text-[#6c7176]">
+                <p className="my-3 text-[16px] leading-1 text-[#6c7176]">
                   {content.body}
                 </p>
 
@@ -378,20 +334,20 @@ const StaticPage = ({ pageKey }) => {
                   {content.points.map((point, index) => (
                     <li
                       key={index}
-                      className={`flex items-center gap-[10px] ${index > 0 ? "mt-4" : ""}`}
+                      className={`flex items-center gap-[10px] ${index > 0 ? "mt-2" : ""}`}
                     >
                       <div className="flex items-center">
                         <ChevronRight className="h-[18px] w-[18px] text-[#f78134]" />
                       </div>
-                      <p className="text-[16px] leading-[30px] text-[#062f3a]">{point}</p>
+                      <p className="text-[16px] leading-1 text-[#062f3a]">{point}</p>
                     </li>
                   ))}
                 </ul>
 
-                <div className="mb-[31px] mt-[60px] grid grid-cols-1 gap-x-[30px] xl:grid-cols-2">
+                <div className="mt-[60px] grid grid-cols-1 gap-x-[30px] xl:grid-cols-2">
                   {content.cards.map((card, index) => (
                     <div key={index} className="mb-[21px] block">
-                      <div className="group relative mb-[30px] block overflow-hidden rounded-[6px]">
+                      <div className="group relative mb-[10px] block overflow-hidden rounded-[6px]">
                         <div className="absolute inset-0 z-[1] rounded-[6px] bg-black opacity-0 transition-all duration-500 group-hover:opacity-20"></div>
                         <img
                           src={card.image}
@@ -408,7 +364,7 @@ const StaticPage = ({ pageKey }) => {
                             {card.title}
                           </h3>
                         </div>
-                        <p className="mt-[17px] text-[16px] leading-[30px] text-[#6c7176]">
+                        <p className="text-[16px] leading-1 text-[#6c7176]">
                           {card.text}
                         </p>
                       </div>
@@ -416,7 +372,7 @@ const StaticPage = ({ pageKey }) => {
                   ))}
                 </div>
 
-                <div className="mt-[30px] block">
+                <div className="block">
                   <div className="faq-one-accrodion relative block">
                     {faqItems.map((faq, index) => {
                       const isOpen = openIndex === index;
@@ -431,9 +387,7 @@ const StaticPage = ({ pageKey }) => {
                           <button
                             type="button"
                             onClick={() => {
-                              if (!isOpen) {
-                                setOpenIndex(index);
-                              }
+                              setOpenIndex(isOpen ? null : index);
                             }}
                             className="relative block w-full cursor-pointer p-3 pr-[40px] text-left transition-all duration-200 sm:px-[25px] sm:pr-[70px]"
                             aria-expanded={isOpen}

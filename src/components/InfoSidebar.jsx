@@ -72,7 +72,7 @@ const InfoSidebar = () => {
         onClick={(event) => event.stopPropagation()}
       >
         <div
-          className={`relative px-[30px] py-[70px] transition-all duration-1000 ${
+          className={`relative px-[30px] py-[30px] transition-all duration-1000 ${
             isOpen ? "visible top-0 opacity-100 delay-[1200ms]" : "invisible top-[150px] opacity-0 delay-[300ms]"
           }`}
         >
@@ -89,20 +89,15 @@ const InfoSidebar = () => {
           <div className="content-inner">
             <div className="relative mb-[30px] max-w-[172px]">
               <Link to="/" onClick={closeSidebar}>
-                <img
-                  src={sidebarLogo}
-                  alt=""
-                  className="w-[100px]"
-                />
               </Link>
             </div>
 
-            <h4 className="mb-[15px] block font-['Rubik',sans-serif] text-[20px] font-medium uppercase leading-[30px] tracking-[0.05em] text-white">
+            <h4 className="mb-[5px] block font-['poppins',sans-serif] text-[20px] font-semibold uppercase leading-[30px] tracking-[0.05em] text-white">
               About Us
             </h4>
-            <div className="mb-[30px] pr-[15px]">
-              <p className="text-[16px] leading-[30px] text-white">
-                Lionex is Pakistan&apos;s first AI powered ecommerce courier
+            <div className="pr-[15px]">
+              <p className="mb-[5px] text-[16px] text-white">
+                Lionex Courier is Pakistan&apos;s first AI powered ecommerce courier
                 solution helping online businesses manage orders, shipping,
                 tracking, and logistics with smart automation, making deliveries
                 faster, reliable, and efficient nationwide.
@@ -140,7 +135,7 @@ const InfoSidebar = () => {
                 <div className="relative mb-0">
                   <ThmBtn
                     type="submit"
-                    className="hover:text-[#062f3a] hover:before:bg-white hover:after:bg-white"
+                    className="hover:text-[#062f3a] hover:before:[#062f3a] hover:after:[#062f3a]"
                   >
                     Submit Now
                   </ThmBtn>
@@ -148,8 +143,8 @@ const InfoSidebar = () => {
               </form>
             </div>
 
-            <div className="relative block pt-[43px]">
-              <h4 className="mb-[15px] block font-['Rubik',sans-serif] text-[20px] font-medium uppercase leading-[30px] tracking-[0.05em] text-white">
+            <div className="relative block pt-[22px]">
+              <h4 className="mb-[5px] block font-['Rubik',sans-serif] text-[20px] font-medium uppercase leading-[30px] tracking-[0.05em] text-white">
                 Contact Info
               </h4>
               <ul className="block pb-[22px]">

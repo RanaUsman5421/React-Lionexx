@@ -1,30 +1,29 @@
 import { useState } from "react";
-import ThmBtn from "./thmBtn";
 
 const comparisonRows = [
   {
-    otherFeature: "Choose Any Best Courier",
+    otherFeature: "Choose the Best Courier",
     otherPct: "0%",
-    lionexFeature: "Choose Any Best Courier",
-    lionexAccent: "(By Ai)",
+    lionexFeature: "Choose the Best Courier",
+    lionexAccent: "(AI)",
     lionexPct: "100%",
   },
   {
     otherFeature: "Customer Support",
     otherPct: "35%",
     lionexFeature: "Customer Support",
-    lionexAccent: "(Ai + Human)",
+    lionexAccent: "(AI + Human)",
     lionexPct: "96%",
   },
   {
     otherFeature: "Auto Reattempt",
     otherPct: "0%",
     lionexFeature: "Auto Reattempt",
-    lionexAccent: "(By Ai + Human)",
+    lionexAccent: "(AI + Human)",
     lionexPct: "89%",
   },
   {
-    otherFeature: "Daily Parcel Reports (Auto)",
+    otherFeature: "Auto Daily Parcel Reports",
     otherPct: "0%",
     lionexFeature: "Daily Parcel Reports",
     lionexAccent: "(By AI + Human)",
@@ -45,9 +44,9 @@ const comparisonRows = [
     lionexPct: "90%",
   },
   {
-    otherFeature: "Booking & Tracking on WhatsApp",
+    otherFeature: "WhatsApp Booking & Tracking",
     otherPct: "2%",
-    lionexFeature: "Booking & Tracking on WhatsApp",
+    lionexFeature: "WhatsApp Booking & Tracking",
     lionexAccent: "(By AI)",
     lionexPct: "100%",
   },
@@ -59,16 +58,16 @@ const comparisonRows = [
     lionexPct: "97%",
   },
   {
-    otherFeature: "Shippers' Live Order Notifications",
+    otherFeature: "Shipper Live Notifications",
     otherPct: "0%",
-    lionexFeature: "Shippers' Live Order Notifications",
+    lionexFeature: "Shipper Live Notifications",
     lionexAccent: "(By AI)",
     lionexPct: "97%",
   },
   {
-    otherFeature: "Consignee Live Order Notifications",
+    otherFeature: "Consignee Live Notifications",
     otherPct: "0%",
-    lionexFeature: "Consignee Live Order Notifications",
+    lionexFeature: "Consignee Live Notifications",
     lionexAccent: "(By AI)",
     lionexPct: "91%",
   },
@@ -94,16 +93,16 @@ const comparisonRows = [
     lionexPct: "89%",
   },
   {
-    otherFeature: "Easy-to-Use CRM Portal",
+    otherFeature: "Easy CRM Portal",
     otherPct: "17%",
-    lionexFeature: "Easy-to-Use CRM Portal",
+    lionexFeature: "Easy CRM Portal",
     lionexAccent: "",
     lionexPct: "100%",
   },
   {
-    otherFeature: "AI Business Growth Assistant",
+    otherFeature: "AI Growth Assistant",
     otherPct: "0%",
-    lionexFeature: "AI Business Growth Assistant",
+    lionexFeature: "AI Growth Assistant",
     lionexAccent: "",
     lionexPct: "83%",
   },
@@ -122,9 +121,9 @@ const comparisonRows = [
     lionexPct: "93%",
   },
   {
-    otherFeature: "Auto Detect Fake Consignees & Orders",
+    otherFeature: "Detect Fake Orders",
     otherPct: "9%",
-    lionexFeature: "Auto Detect Fake Consignees & Orders",
+    lionexFeature: "Detect Fake Orders",
     lionexAccent: "",
     lionexPct: "97%",
   },
@@ -136,22 +135,22 @@ const comparisonRows = [
     lionexPct: "94%",
   },
   {
-    otherFeature: "Many More Smart & Innovative Tools",
+    otherFeature: "More Smart Tools",
     otherPct: "0%",
-    lionexFeature: "Many More Smart & Innovative Tools",
+    lionexFeature: "More Smart Tools",
     lionexAccent: "",
     lionexPct: "100%",
   },
 ];
 
 const lionexStatusText = {
-  "Choose Any Best Courier": "Fully Available",
-  "Customer Support": "24/7 Smart Support",
+  "Choose the Best Courier": "Always On",
+  "Customer Support": "24/7 Support",
   "Auto Reattempt": "Automated",
 };
 
 const otherCourierStatusText = {
-  "Choose Any Best Courier": "Not Available",
+  "Choose the Best Courier": "Unavailable",
   "Customer Support": "Limited Support",
   "Auto Reattempt": "Manual / Limited",
 };
@@ -164,20 +163,16 @@ const getOtherCourierLabel = (feature, pct) => {
 };
 
 const StatusCell = ({ ok, label }) => (
-  <div className="flex min-h-[54px] items-center gap-2 rounded-[16px] border border-[#eef1f8] bg-white px-3 py-3 shadow-[0_12px_32px_rgba(15,23,42,0.07)] min-[480px]:min-h-[62px] min-[480px]:gap-3 min-[480px]:px-4 min-[768px]:min-h-[82px] min-[768px]:px-5">
+  <div className="flex min-h-[46px] items-center justify-center gap-2 rounded-[14px] border border-[#eef1f8] bg-white px-2 py-2 text-center shadow-[0_10px_24px_rgba(15,23,42,0.06)] min-[480px]:min-h-[52px] min-[480px]:gap-2.5 min-[480px]:px-3 min-[768px]:min-h-[68px] min-[768px]:px-4">
     <span
-      className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-[10px] shadow-[0_8px_20px_rgba(0,0,0,0.14)] min-[480px]:h-8 min-[480px]:w-8 min-[768px]:h-10 min-[768px]:w-10 ${
+      className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-[9px] shadow-[0_8px_18px_rgba(0,0,0,0.12)] min-[480px]:h-7 min-[480px]:w-7 min-[768px]:h-9 min-[768px]:w-9 ${
         ok
           ? "bg-gradient-to-br from-[#3ee58f] to-[#18b968]"
           : "bg-gradient-to-br from-[#ff7e6a] to-[#e34a3c]"
       }`}
     >
       {ok ? (
-        <svg
-          viewBox="0 0 16 16"
-          className="h-3 w-3 min-[480px]:h-4 min-[480px]:w-4 min-[768px]:h-[18px] min-[768px]:w-[18px]"
-          fill="none"
-        >
+        <svg viewBox="0 0 16 16" className="h-3 w-3 min-[768px]:h-4 min-[768px]:w-4" fill="none">
           <path
             d="M3 8.5 6.2 11.5 13 4.5"
             stroke="white"
@@ -187,11 +182,7 @@ const StatusCell = ({ ok, label }) => (
           />
         </svg>
       ) : (
-        <svg
-          viewBox="0 0 16 16"
-          className="h-3 w-3 min-[480px]:h-4 min-[480px]:w-4 min-[768px]:h-[18px] min-[768px]:w-[18px]"
-          fill="none"
-        >
+        <svg viewBox="0 0 16 16" className="h-3 w-3 min-[768px]:h-4 min-[768px]:w-4" fill="none">
           <path
             d="M4 4 12 12M12 4 4 12"
             stroke="white"
@@ -201,22 +192,23 @@ const StatusCell = ({ ok, label }) => (
         </svg>
       )}
     </span>
-    <span className="font-['Rubik',sans-serif] text-[10px] font-medium leading-[1.1] text-[#23262f] min-[480px]:text-[12px] min-[768px]:text-[16px] lg:text-[18px]">
+    <span className="whitespace-nowrap font-['Rubik',sans-serif] text-[9px] font-medium leading-none text-[#23262f] min-[480px]:text-[10px] min-[768px]:text-[13px] lg:text-[15px]">
       {label}
     </span>
   </div>
 );
 
 const BusinessGrowthSection = () => {
-  const [showAllRows, setShowAllRows] = useState(false);
-  const visibleRows = showAllRows ? comparisonRows : comparisonRows.slice(0, 5);
+  const [visibleRowsCount, setVisibleRowsCount] = useState(5);
+  const isAllRowsVisible = visibleRowsCount >= comparisonRows.length;
+  const visibleRows = comparisonRows.slice(0, visibleRowsCount);
 
   return (
-    <section className="bg-white px-2 py-[30px] min-[480px]:px-3 md:px-5">
-      <div className="mx-auto max-w-[1280px]">
-        <div className="mb-10 text-center md:mb-12">
-          <h2 className="font-['Rubik',sans-serif] text-[24px] font-bold leading-[1.08] tracking-[-0.03em] text-[#111111] min-[480px]:text-[28px] md:text-[40px] lg:text-[56px]">
-            Why LionEx Powers Your
+    <section className="bg-white px-2 py-5 my-5 min-[480px]:px-3 md:px-5">
+      <div className="w-full">
+        <div className="mb-8 text-center md:mb-10">
+          <h2 className="font-['Rubik',sans-serif] text-[24px] font-bold leading-[1.08] tracking-[-0.03em] text-[#111111] min-[480px]:text-[28px] md:text-[38px] lg:text-[50px]">
+            Why LionEx Drives Your
             <br />
             <span className="relative inline-block text-[#f78134]">
               <span className="absolute inset-0" />
@@ -225,34 +217,34 @@ const BusinessGrowthSection = () => {
           </h2>
         </div>
 
-        <div className="overflow-hidden rounded-[18px] border border-[rgba(214,221,244,0.85)] bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(248,250,255,0.94))] shadow-[0_28px_60px_rgba(48,72,115,0.12)]">
-          <div className="grid grid-cols-[1.3fr_1fr_1fr] bg-[linear-gradient(90deg,#26107a_0%,#4c2dc8_45%,#56c8ff_70%,#6f8fb6_100%)] text-white">
-            <div className="px-3 py-3 text-left font-['Rubik',sans-serif] text-[10px] font-semibold min-[480px]:px-4 min-[480px]:text-[12px] min-[768px]:px-7 min-[768px]:py-6 min-[768px]:text-[18px] lg:text-[22px]">
+        <div className="overflow-hidden rounded-[16px] border border-[rgba(214,221,244,0.85)] bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(248,250,255,0.94))] shadow-[0_22px_50px_rgba(48,72,115,0.1)]">
+          <div className="grid grid-cols-[1.4fr_1fr_1fr] min-h-[72px] bg-[linear-gradient(90deg,#26107a_0%,#4c2dc8_45%,#56c8ff_70%,#6f8fb6_100%)] text-white">
+            <div className="flex h-full items-center px-2 text-left font-['Rubik',sans-serif] text-[10px] font-semibold leading-tight min-[480px]:px-3 min-[480px]:text-[11px] min-[768px]:px-5 min-[768px]:text-[16px] lg:text-[20px]">
               Smart Features
             </div>
-            <div className="border-x border-white/10 px-3 py-3 text-center font-['Rubik',sans-serif] text-[10px] font-semibold min-[480px]:px-4 min-[480px]:text-[12px] min-[768px]:px-7 min-[768px]:py-6 min-[768px]:text-[18px] lg:text-[22px]">
-              LionEx
+            <div className="flex h-full items-center justify-center border-x border-white/10 px-2 text-center font-['Rubik',sans-serif] text-[10px] font-semibold leading-tight min-[480px]:px-3 min-[480px]:text-[11px] min-[768px]:px-5 min-[768px]:text-[16px] lg:text-[20px]">
+              LionEx Courier
             </div>
-            <div className="px-3 py-3 text-center font-['Rubik',sans-serif] text-[10px] font-semibold min-[480px]:px-4 min-[480px]:text-[12px] min-[768px]:px-7 min-[768px]:py-6 min-[768px]:text-[18px] lg:text-[22px]">
-              Other Couriers
+            <div className="flex h-full items-center justify-center px-2 text-center font-['Rubik',sans-serif] text-[10px] font-semibold leading-tight min-[480px]:px-3 min-[480px]:text-[11px] min-[768px]:px-5 min-[768px]:text-[16px] lg:text-[20px]">
+              Others
             </div>
           </div>
 
-          <div className="grid gap-[2px] bg-[rgba(233,238,249,0.7)] p-[2px] min-[480px]:gap-[3px] min-[480px]:p-[3px] min-[768px]:gap-[4px] min-[768px]:p-[4px]">
+          <div className="grid gap-[2px] bg-[rgba(233,238,249,0.7)] p-[2px] min-[768px]:gap-[3px] min-[768px]:p-[3px]">
             {visibleRows.map((row) => (
               <div
                 key={row.otherFeature}
-                className="grid grid-cols-[1.3fr_1fr_1fr] items-stretch gap-[2px] rounded-[16px] bg-transparent"
+                className="grid grid-cols-[1.4fr_1fr_1fr] min-h-[72px] items-stretch gap-[2px] rounded-[14px] bg-transparent"
               >
-                <div className="flex items-center bg-[linear-gradient(135deg,rgba(255,246,238,0.95),rgba(247,249,255,0.96))] px-3 py-3 min-[480px]:px-4 min-[768px]:px-7 min-[768px]:py-4">
-                  <div className="flex flex-wrap items-center gap-2 min-[768px]:gap-3">
-                    <span className="rounded-[16px] px-3 py-2 text-[10px] font-medium leading-[1.15] text-black min-[480px]:text-[12px] min-[768px]:px-4 min-[768px]:py-3 min-[768px]:text-[16px] lg:text-[18px]">
+                <div className="flex h-full items-center bg-[linear-gradient(135deg,rgba(255,246,238,0.95),rgba(247,249,255,0.96))] px-2 py-2.5 min-[480px]:px-3 min-[768px]:px-5 min-[768px]:py-3">
+                  <div className="flex h-full flex-wrap items-center gap-1.5 min-[768px]:gap-2">
+                    <span className="max-w-full rounded-[14px] px-2 py-1.5 text-[9px] font-medium leading-[1.2] text-black min-[480px]:text-[10px] min-[768px]:px-3 min-[768px]:py-2 min-[768px]:text-[14px] lg:text-[16px]">
                       {row.lionexFeature}
                     </span>
                     {row.lionexAccent ? (
                       <button
                         type="button"
-                        className="rounded-[16px] border border-[rgba(255,255,255,0.55)] bg-[linear-gradient(135deg,rgba(255,211,138,0.72),rgba(255,255,255,0.45)_52%,rgba(223,175,255,0.35)_100%)] px-3 py-[7px] font-['Rubik',sans-serif] text-[9px] font-semibold leading-none text-[#d97815] shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_10px_24px_rgba(237,171,80,0.25)] backdrop-blur-[10px] min-[480px]:text-[10px] min-[768px]:px-4 min-[768px]:py-[10px] min-[768px]:text-[14px]"
+                        className="rounded-[14px] border border-[rgba(255,255,255,0.55)] bg-[linear-gradient(135deg,rgba(255,211,138,0.72),rgba(255,255,255,0.45)_52%,rgba(223,175,255,0.35)_100%)] px-2 py-1.5 font-['Rubik',sans-serif] text-[8px] font-semibold leading-none text-[#d97815] shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_8px_18px_rgba(237,171,80,0.2)] backdrop-blur-[10px] min-[480px]:text-[9px] min-[768px]:px-3 min-[768px]:py-2 min-[768px]:text-[12px]"
                       >
                         {row.lionexAccent.replace(/[()]/g, "")}
                       </button>
@@ -260,11 +252,11 @@ const BusinessGrowthSection = () => {
                   </div>
                 </div>
 
-                <div className="bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(245,248,255,0.96))] px-2 py-2 min-[480px]:px-3 min-[480px]:py-3 min-[768px]:px-4 min-[768px]:py-4">
+                <div className="flex h-full items-center justify-center bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(245,248,255,0.96))] px-1.5 py-1.5 min-[480px]:px-2 min-[480px]:py-2 min-[768px]:px-3 min-[768px]:py-3">
                   <StatusCell ok label={getLionexLabel(row.lionexFeature)} />
                 </div>
 
-                <div className="bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(245,248,255,0.96))] px-2 py-2 min-[480px]:px-3 min-[480px]:py-3 min-[768px]:px-4 min-[768px]:py-4">
+                <div className="flex h-full items-center justify-center bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(245,248,255,0.96))] px-1.5 py-1.5 min-[480px]:px-2 min-[480px]:py-2 min-[768px]:px-3 min-[768px]:py-3">
                   <StatusCell
                     ok={false}
                     label={getOtherCourierLabel(row.lionexFeature, row.otherPct)}
@@ -272,19 +264,37 @@ const BusinessGrowthSection = () => {
                 </div>
               </div>
             ))}
+
+            <div className="grid grid-cols-[1.4fr_1fr_1fr] items-stretch gap-[2px] rounded-[14px] bg-transparent">
+              <button
+                type="button"
+                onClick={() =>
+                  setVisibleRowsCount((prev) =>
+                    isAllRowsVisible ? 5 : Math.min(prev + 5, comparisonRows.length)
+                  )
+                }
+                className="col-span-3 flex min-h-[48px] w-full items-center justify-center gap-2 rounded-[14px] bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(245,248,255,0.96))] px-3 py-2.5 font-['Rubik',sans-serif] text-[10px] font-medium leading-none text-[#26107a] shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition hover:text-[#f78134] min-[480px]:min-h-[54px] min-[480px]:px-4 min-[480px]:text-[11px] min-[768px]:min-h-[68px] min-[768px]:px-5 min-[768px]:text-[14px] lg:text-[16px]"
+              >
+                <span>{isAllRowsVisible ? "Show Less" : "Show More"}</span>
+                <svg
+                  viewBox="0 0 16 16"
+                  className={`h-3 w-3 transition-transform duration-300 min-[480px]:h-4 min-[480px]:w-4 min-[768px]:h-[18px] min-[768px]:w-[18px] ${
+                    isAllRowsVisible ? "rotate-180" : "rotate-0"
+                  }`}
+                  fill="none"
+                >
+                  <path
+                    d="M3.5 6 8 10.5 12.5 6"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
-
-        {!showAllRows ? (
-          <div className="mt-6 flex justify-center">
-            <ThmBtn
-              type="button"
-              onClick={() => setShowAllRows(true)}
-            >
-              Load More
-            </ThmBtn>
-          </div>
-        ) : null}
       </div>
     </section>
   );

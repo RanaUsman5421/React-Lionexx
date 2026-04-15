@@ -3,66 +3,66 @@ import aboutImage from "../assets/images/services/service-details-img-1.jpg";
 import ThmBtn from "./thmBtn";
 
 const stats = [
-  { value: "7", label: "Years of experience" },
-  { value: "3,097", label: "Happy customers" },
-  { value: "10", label: "Score on ecommerce" },
-  { value: "98%", label: "Customer Satisfaction" },
+  { value: "5+", label: "NationWide Branches" },
+  { value: "5K+", label: "Satisfied Customers" },
+  { value: "500K+", label: "Positive Reviews" },
+  { value: "98%", label: "Successful Delivery" },
 ];
 
 const chooseCards = [
   {
     id: 1,
-    title: "What makes Behoice different from other eCommerce stores?",
+    title: "What makes LionEx Courier unique in Pakistan?",
     description:
-      "Behoice stands out because we don't just sell products, we sell trust. Our focus is on premium quality, fast delivery, and excellent customer service, ensuring a smooth and reliable shopping experience.",
+      "LionEx Courier blends AI-powered shipment routing with local courier expertise, delivering faster, smarter logistics solutions across Pakistan for modern ecommerce businesses.",
   },
   {
     id: 2,
-    title: "Why should I trust Behoice?",
+    title: "Why should I choose LionEx Courier for my business?",
     description:
-      "We have been serving customers since 2017 and have built a strong reputation for quality and reliability. Our transparent policies, secure payments, and dedicated customer support make us a brand you can trust.",
+      "LionEx Courier provides reliable pickup, secure shipment handling, and proactive communication so brands can scale confidently with professional delivery support.",
   },
   {
     id: 3,
-    title: "Does Behoice guarantee product quality?",
+    title: "How does LionEx Courier ensure package safety?",
     description:
-      "Yes! Every product on Behoice is carefully checked to ensure premium quality. If you ever face an issue, our easy return and exchange policy has you covered.",
+      "Every parcel moves through our secure tracking system, quality checks, and dedicated delivery partners, reducing damage and keeping customer orders safe from pickup to drop-off.",
   },
   {
     id: 4,
-    title: "Is Behoice an official company?",
+    title: "Is LionEx Courier officially registered?",
     description:
-      "Yes, Behoice is a registered eCommerce store in Pakistan, operating under a trusted business network that includes Bellis (IT Training), BServices (Software Solutions), and Asaan Zindgi (Home Services).",
+      "Yes. LionEx Courier is a licensed Pakistani logistics company backed by verified operations, professional service standards, and transparent ecommerce shipping practices.",
   },
   {
     id: 5,
-    title: "How fast is Behoice's delivery service?",
+    title: "How quickly does LionEx Courier deliver?",
     description:
-      "We deliver across Pakistan within 3 to 7 business days. Our logistics partners ensure safe and timely deliveries to your doorstep.",
+      "LionEx Courier delivers nationwide in 3 to 7 business days using optimized routes and smart dispatch, ensuring fast and predictable delivery performance.",
   },
   {
     id: 6,
-    title: "Does Behoice offer customer support?",
+    title: "Does LionEx Courier provide customer support?",
     description:
-      "Absolutely! Our support team is available via WhatsApp, email, and live chat to assist you with any inquiries or issues.",
+      "Yes. Our support team is available on WhatsApp, email, and phone to resolve shipment queries, track orders, and provide friendly logistics assistance when you need it.",
   },
   {
     id: 7,
-    title: "What if I receive a wrong or damaged product?",
+    title: "What happens if my shipment is damaged?",
     description:
-      "No worries! Just contact us within 24 hours, and we'll arrange a replacement or refund. Customer satisfaction is our top priority.",
+      "LionEx Courier handles damaged deliveries with care, offering quick claims assistance, replacement coordination, and support to restore customer satisfaction fast.",
   },
   {
     id: 8,
-    title: "Does Behoice offer a return policy?",
+    title: "Does LionEx Courier allow returns and exchanges?",
     description:
-      "Yes! We offer easy returns and exchanges if your product meets our return conditions. Simply follow the return process for a hassle-free experience.",
+      "Yes. We support simple returns and exchanges with clear procedures, making it easy for merchants and customers to manage reverse logistics efficiently.",
   },
   {
     id: 9,
-    title: "Why should I choose Behoice over other platforms?",
+    title: "Why is LionEx Courier a better choice than other couriers?",
     description:
-      "Because we care about our customers. From high-quality products to excellent service, Behoice is built on trust, reliability, and customer satisfaction. Your happiness is our success!",
+      "LionEx Courier combines advanced AI routing, ecommerce-focused delivery services, and reliable customer care, creating a smarter shipping experience for online sellers.",
   },
 ];
 
@@ -70,8 +70,8 @@ const AboutCarrotSection = () => {
   const [isChooseOpen, setIsChooseOpen] = useState(false);
 
   return (
-    <section className="bg-white !px-5 sm:px-6 lg:px-8 lg:py-16">
-      <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_1.05fr] lg:items-center">
+    <section className="bg-white !px-5 sm:px-6 lg:px-8 py-5 my-5">
+      <div className="mx-auto grid gap-3 sm:gap-10 lg:grid-cols-[1fr_1.05fr] lg:items-center">
         <div>
           <h2 className="font-['Poppins',sans-serif] text-4xl font-light uppercase leading-none tracking-tight text-[#1f2433] sm:text-5xl md:text-6xl">
             Your <span className="font-semibold text-[#f78134]">Trusted</span>
@@ -81,9 +81,9 @@ const AboutCarrotSection = () => {
             Platform
           </h2>
 
-          <div className="mt-6 space-y-5 font-['Poppins',sans-serif] text-base leading-8 text-[#374151]">
+          <div className="my-3 space-y-5 font-['Poppins',sans-serif] text-base  text-[#374151]">
             <p>
-              Lionex is your reliable eCommerce destination, offering high
+              LionEx Courier is your reliable eCommerce destination, offering high
               quality products with proven dependability. We go beyond selling
               items by creating lasting confidence, delivering seamless service
               and an exceptional online shopping journey for every valued
@@ -93,16 +93,17 @@ const AboutCarrotSection = () => {
           </div>
         </div>
 
-        <div className="overflow-hidden rounded-[4px]">
+        <div className="overflow-hidden rounded-[32px] bg-[linear-gradient(135deg,rgba(247,129,52,0.18),rgba(255,255,255,0.9))]">
           <img
             src={aboutImage}
             alt="About section"
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover transition duration-700 ease-out hover:scale-105"
+            style={{ clipPath: "polygon(0 0, 100% 0, 100% 85%, 88% 100%, 0 100%)" }}
           />
         </div>
       </div>
 
-      <div className="mx-auto mt-14 max-w-7xl">
+      <div className="mx-auto mt-14">
         <h3 className="text-center font-['Poppins',sans-serif] text-2xl font-semibold text-[#062f3a] sm:text-3xl">
           Some impressive numbers
         </h3>
@@ -123,7 +124,7 @@ const AboutCarrotSection = () => {
         </div>
       </div>
 
-      <div className="mx-auto mt-14 max-w-7xl rounded-[8px] border border-[#e5e7eb] bg-white shadow-[0_14px_34px_rgba(6,47,58,0.06)]">
+      <div className="mx-auto mt-14 rounded-[8px] border border-[#e5e7eb] bg-white shadow-[0_14px_34px_rgba(6,47,58,0.06)]">
         <button
           type="button"
           onClick={() => setIsChooseOpen((prev) => !prev)}

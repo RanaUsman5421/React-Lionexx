@@ -1,9 +1,9 @@
 import pageHeaderBg from "../assets/images/backgrounds/page-header-bg.jpg";
 
-const PageShell = ({ title, subtitle, headerContent, children }) => {
+const PageShell = ({ title, headerContent, children }) => {
   return (
     <>
-      <section className="relative z-[1] block overflow-hidden bg-[#062f3a]">
+      <section className="relative z-[1] py-10 block overflow-hidden bg-[#062f3a]">
         <div
           className="absolute inset-0 -z-[1] bg-cover bg-center bg-no-repeat opacity-10"
           style={{
@@ -31,7 +31,7 @@ const PageShell = ({ title, subtitle, headerContent, children }) => {
                   <span className="fas fa-angle-right relative top-[1px] text-[16px] font-bold text-[#f78134]"></span>
                 </li>
                 <li className="relative ml-[5px] inline-block font-['Rubik',sans-serif] text-[16px] font-medium capitalize leading-[18px] text-white transition-all duration-500 ease-[ease]">
-                  {subtitle || title}
+                  {title}
                 </li>
               </ul>
             </div>

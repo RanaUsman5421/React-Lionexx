@@ -63,12 +63,12 @@ const WhyChooseSection = () => {
         `}
       </style>
 
-      <section className="relative block pb-20 md:py-[85px] xl:pb-[120px] xl:pt-0">
-        <div className="mx-auto max-w-[1320px] px-[15px]">
-          <div className="grid grid-cols-1 gap-y-[50px] xl:grid-cols-2 xl:gap-x-0">
+      <section className="relative block my-5">
+        <div className="px-[15px]">
+          <div className="grid grid-cols-1 gap-y-5 xl:grid-cols-2 xl:gap-x-0">
             <div className="xl:col-span-1">
               <div className="relative block md:mx-auto md:max-w-[650px] xl:max-w-none">
-                <div className="mb-[31px] text-left">
+                <div className="mb-3 text-left">
                   <div className="relative mb-3 inline-flex flex-wrap items-center gap-[10px]">
                     <span className="block w-10 border border-dashed border-[#f78134]"></span>
                     <div className="absolute left-2 top-[-4px] rotate-180">
@@ -89,14 +89,14 @@ const WhyChooseSection = () => {
                       />
                     </div>
                   </div>
-                  <h3 className="font-sans text-[34px] font-bold leading-[1.2] text-[#062f3a] md:text-[40px]">
-                    Efficient, Safe, & Swift <br />
-                    <span className="text-[#f78134]">AI Powered Solution!</span>
+                  <h3 className="font-sans text-[25px] font-bold leading-[1] text-[#062f3a] md:text-[40px]">
+                    Efficient, Safe, & Swift 
+                    <span className="text-[#f78134]"> AI Powered Solution!</span>
                   </h3>
                 </div>
 
-                <p className="text-[15px] leading-[30px] text-[#797f7d]">
-                  Choose Lionex for innovative AI-powered courier solutions,
+                <p className="text-[15px] text-[#797f7d]">
+                  Choose LionEx Courier for innovative AI-powered courier solutions,
                   seamless ecommerce logistics, real-time tracking, secure
                   shipments, reliable domestic and international deliveries,
                   optimized routes, professional support, fast service, and
@@ -104,7 +104,7 @@ const WhyChooseSection = () => {
                   nationwide.
                 </p>
 
-                <div className="mb-[31px] mt-[37px]">
+                <div className="my-4">
                   <ul className="flex flex-col items-start gap-5 md:flex-row md:items-center">
                     {features.map((feature) => (
                       <li

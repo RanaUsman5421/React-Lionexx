@@ -52,9 +52,9 @@ const SkillsSection = () => {
 
       <section
         ref={ref}
-        className="relative z-[1] hidden overflow-hidden px-0 py-20 md:block bg-white md:py-[85px]"
+        className="relative z-[1] hidden overflow-hidden px-0 py-5 my-5 md:block bg-white"
       >
-        <div className="mx-auto max-w-[1320px] px-[15px]">
+        <div className="px-5">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div>
               <div className="relative block">

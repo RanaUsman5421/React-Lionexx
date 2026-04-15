@@ -31,9 +31,9 @@ const BlogPreviews = () => {
         `}
       </style>
 
-      <section className="relative z-[1] block px-0 pb-[50px] pt-20 md:pb-20 md:pt-[100px]">
-        <div className="mx-auto max-w-[1320px] px-[15px]">
-          <div className="mb-[52px] text-center">
+      <section className="relative z-[1] block px-0my-5">
+        <div className="px-[15px]">
+          <div className="mb-5 text-center">
             <div className="relative mb-3 inline-flex flex-wrap items-center gap-[10px]">
                   <span className="block w-10 border border-dashed border-[#f78134]"></span>
                   <div className="absolute left-2 top-[-4px] rotate-180">
@@ -48,7 +48,7 @@ const BlogPreviews = () => {
                     <FontAwesomeIcon icon={faPlane} className="inline-block text-[14px] text-[#f78134] animate-[l-r-move_2s_linear_infinite]"/>
                   </div>
                 </div>
-            <h3 className="font-sans text-[34px] font-bold leading-[1.2] text-[#062f3a] md:text-[40px]">
+            <h3 className="font-poppins text-[25px] font-bold leading-[1.2] text-[#062f3a] md:text-[40px]">
               Latest News Directly <br />
               <span className="text-[#f78134]">From Our Blog</span>
             </h3>

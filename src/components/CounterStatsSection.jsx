@@ -6,19 +6,19 @@ const counters = [
     icon: "icon-worldwide-shipping",
     value: 5,
     suffix: "+",
-    text: "Worldwide Branches",
+    text: "NationWide Branches",
   },
   {
     icon: "icon-user-avatar",
-    value: 10,
+    value: 2,
     suffix: "K+",
-    text: "Total Clients in World",
+    text: "Satisfied Clients",
   },
   {
     icon: "icon-rating",
-    value: 1,
-    suffix: "M",
-    text: "Satisfied Customers",
+    value: 500,
+    suffix: "K",
+    text: "Positive Reviews",
   },
   {
     icon: "icon-delivery-man-1",
@@ -86,7 +86,7 @@ const CounterStatsSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative z-[1] block overflow-hidden px-0 pb-[50px] pt-20 md:pb-20 md:pt-[100px]"
+      className="relative z-[1] block overflow-hidden px-0 py-5 my-5"
     >
       <style>
         {`
@@ -102,7 +102,7 @@ const CounterStatsSection = () => {
         style={{ animation: "counterFloatBobX 5s ease-in-out infinite",backgroundImage: `url(${counterBgIamge})` }}
       ></div>
 
-      <div className="mx-auto max-w-[1320px] px-[15px]">
+      <div className="px-[15px]">
         <div className="relative block">
           <ul className="relative flex flex-col items-center justify-between gap-y-6 md:flex-row md:flex-wrap">
             {counters.map((counter) => (

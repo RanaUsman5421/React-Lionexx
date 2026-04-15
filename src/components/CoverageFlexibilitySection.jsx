@@ -3,8 +3,8 @@ import manImage from "../assets/images/resources/manImage.png";
 
 const stats = [
   {
-    value: "869",
-    label: "Projects Completed",
+    value: "100K+",
+    label: "Orders Delivered",
     icon: (
       <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none">
         <path
@@ -24,8 +24,8 @@ const stats = [
     ),
   },
   {
-    value: "683",
-    label: "Satisfied Customers",
+    value: "95K+",
+    label: "Delivered on Time",
     icon: (
       <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none">
         <path
@@ -39,8 +39,8 @@ const stats = [
     ),
   },
   {
-    value: "975",
-    label: "Delivered on Time",
+    value: "5K+",
+    label: "Satisfied Customers",
     icon: (
       <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none">
         <path
@@ -57,8 +57,8 @@ const stats = [
 
 const CoverageFlexibilitySection = () => {
   return (
-    <section className="bg-white px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
-      <div className="mx-auto max-w-[1280px]">
+    <section className="bg-white px-4 sm:px-6 lg:px-8">
+      <div className="">
         <div
           className="relative overflow-hidden rounded-sm bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${bannerBg})` }}
@@ -70,7 +70,7 @@ const CoverageFlexibilitySection = () => {
               <img
                 src={manImage}
                 alt="Delivery man"
-                className="w-full max-w-[460px] mb-[-50px] object-contain md:max-w-[620px] lg:max-w-[860px]"
+                className="w-full hidden mg:block max-w-[460px] mb-[-50px] object-contain md:max-w-[620px] lg:max-w-[860px]"
               />
             </div>
 
@@ -83,12 +83,11 @@ const CoverageFlexibilitySection = () => {
               </div>
 
               <h2 className="max-w-[640px] font-['Rubik',sans-serif] text-[30px] font-bold leading-[1.1] text-white sm:text-[38px] md:text-[46px] lg:text-[54px]">
-                Total Coverage &amp; Flexibility in Exports &amp; Imports
+                Fast Delivery Across All Over Pakistan
               </h2>
 
-              <p className="mt-5 max-w-[560px] font-['Rubik',sans-serif] text-[14px] leading-[1.9] text-white/90 md:mt-6 md:text-[16px]">
-                Long established fact that a reader will be distracted by the
-                readable content of a page when looking at its layout.
+              <p className="max-w-[560px] font-['poppins',sans-serif] text-[14px] text-white/90 md:mt-6 md:text-[16px]">
+                Lionex Courier ensures fast and reliable delivery services, helping businesses manage shipments efficiently while providing secure, timely logistics solutions worldwide.
               </p>
 
               <div className="mt-8 grid gap-10 sm:gap-4 pb-7 sm:grid-cols-3 md:mt-10 md:pb-8">

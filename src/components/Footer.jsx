@@ -47,8 +47,8 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="relative block pb-20">
-            <div className="grid grid-cols-1 gap-y-[34px] md:grid-cols-2 xl:grid-cols-4">
+          <div className="relative block pb-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
               <div
                 className="md:col-span-1 xl:col-span-1"
                 data-wow-delay="100ms"
@@ -63,7 +63,7 @@ const Footer = () => {
                       />
                     </Link>
                   </div>
-                  <p className="mb-[22px] mt-5 text-white/80">
+                  <p className="mb-[22px] mt-2 text-white/80">
                     Secure other greater pleasures, or else he endures pains to
                     avoid worse pains selection
                   </p>
@@ -88,7 +88,7 @@ const Footer = () => {
                 data-wow-delay="200ms"
               >
                 <div className="relative block">
-                  <div className="relative mb-[25px] block">
+                  <div className="relative mb-2 sm:mb-[25px] block">
                     <h3 className="text-[24px] font-semibold capitalize leading-[34px] text-white">Quick Links</h3>
                   </div>
                   <div className="relative block">
@@ -117,7 +117,7 @@ const Footer = () => {
                 data-wow-delay="300ms"
               >
                 <div className="relative block">
-                  <div className="relative mb-[25px] block">
+                  <div className="relative mb-2 sm:mb-[25px] block">
                     <h3 className="text-[24px] font-semibold capitalize leading-[34px] text-white">Our Services</h3>
                   </div>
                   <ul className="relative block">
@@ -149,7 +149,7 @@ const Footer = () => {
                 data-wow-delay="400ms"
               >
                 <div className="relative block">
-                  <div className="relative mb-[25px] block">
+                  <div className="relative mb-2 sm:mb-[25px] block">
                     <h3 className="text-[24px] font-semibold capitalize leading-[34px] text-white">Official info</h3>
                   </div>
                   <ul className="relative block">

@@ -29,7 +29,7 @@ const Home = () => {
   return (
     <>
       <div className="overflow-y-visible lg:mb-[110px]">
-        <section className="relative z-0 flex h-[70vh] w-full items-center overflow-visible bg-[#0F3340] sm:h-[80vh] md:h-screen md:min-h-[90vh] lg:pb-0">
+        <section className="relative z-0 flex h-[60vh] w-full items-center overflow-visible bg-[#0F3340] sm:h-[80vh] md:h-screen md:min-h-[90vh] lg:pb-0">
           <style>
             {`
             @keyframes aiFloat {
@@ -61,14 +61,14 @@ const Home = () => {
               <p className="text-md text-left font-medium text-white">
                 Pakistan 1<sup className="text-xs lowercase">st</sup> AI Powered
               </p>
-              <h1 className="!my-0 text-3xl sm:text-[45px] md:text-6xl lg:text-[59px] font-semibold text-left text-white">
+              <h1 className="!my-0 text-3xl sm:text-[45px] md:text-6xl lg:text-[55px] font-bold text-left text-white">
                 SMARTEST COURIER <br />
                 <span className="text-orange-500 bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text">
                   NETWORK
                 </span>
               </h1>
               <p className="!mt-2 text-left sm:max-w-md text-xs md:mx-0 md:text-md lg:text-sm xl:text-[15px] text-white max-w-xs lg:mx-0">
-                Lionex is Pakistan's first AI-powered courier. Fast, reliable
+                Lionex Courier is Pakistan's first AI-powered courier. Fast, reliable
                 deliveries with smart automation, real-time tracking, and full
                 WhatsApp support for modern eCommerce.
               </p>
@@ -149,19 +149,20 @@ const Home = () => {
           </div>
         </section>
       </div>
-      <AboutCarrotSection />
-      <ChooseSection />
-      <BusinessGrowthSection />
-      <SlidingTextSection />
-      <CoverageFlexibilitySection />
-      <ServicesCarousel />
-      <SkillsSection />
-      <TestimonialsGrid />
-      <WhyChooseSection />
-      <ProcessSteps />
-      <CounterStatsSection />
-      <FAQSection />
-      <BlogPreviews />
+      <div className="flex flex-col gap-y-5">
+        <ChooseSection />
+        <BusinessGrowthSection />
+        <SlidingTextSection />
+        <CoverageFlexibilitySection />
+        <ServicesCarousel />
+        <SkillsSection />
+        <TestimonialsGrid />
+        <WhyChooseSection />
+        <ProcessSteps />
+        <CounterStatsSection />
+        <FAQSection />
+        <BlogPreviews />
+      </div>
     </>
   );
 };

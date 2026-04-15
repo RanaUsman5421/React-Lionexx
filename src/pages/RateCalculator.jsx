@@ -296,7 +296,7 @@ const RateCalculator = () => {
         </div>
       </section>
 
-      <section className="bg-white py-20">
+      <section className="bg-white">
         <div className="mx-auto w-full max-w-[1320px] px-5 md:px-10 xl:px-[15px]">
           <div className="grid grid-cols-1 gap-[30px] lg:grid-cols-3">
             {featureItems.map((feature) => (

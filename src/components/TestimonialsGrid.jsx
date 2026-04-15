@@ -41,17 +41,17 @@ const videos = [
 
 const TestimonialsGrid = () => {
   return (
-    <section className="relative overflow-hidden px-0 py-16 sm:py-20 lg:py-24">
+    <section className="relative overflow-hidden px-0 py-5 my-5">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-x-0 top-0 h-[520px] bg-[linear-gradient(180deg,rgba(6,47,58,0.06),transparent)]" />
-        <div className="absolute -left-24 top-24 h-72 w-72 rounded-full bg-[#f78134]/10 blur-3xl" />
+        <div className="absolute -left-24 h-72 w-72 rounded-full bg-[#f78134]/10 blur-3xl" />
         <div className="absolute right-0 bottom-0 h-80 w-80 rounded-full bg-[#062f3a]/10 blur-3xl" />
       </div>
 
-      <div className="mx-auto max-w-[1320px] px-[15px]">
-        <div className="mb-10 grid gap-8 lg:mb-14 lg:grid-cols-[1fr_auto] lg:items-end">
+      <div className="p-5">
+        <div className="mb-5 grid gap-8 lg:mb-5 lg:grid-cols-[1fr_auto] lg:items-end">
           <div className="max-w-[760px]">
-            <div className="relative mb-5 inline-flex flex-wrap items-center gap-[10px]">
+            <div className="relative mb-3 inline-flex flex-wrap items-center gap-[10px]">
               <span className="block w-10 border border-dashed border-[#f78134]"></span>
               <div className="absolute left-2 top-[-4px] rotate-180">
                 <FontAwesomeIcon
@@ -71,20 +71,14 @@ const TestimonialsGrid = () => {
               </div>
             </div>
 
-            <h3 className="font-sans text-[36px] font-bold leading-[1.04] text-[#062f3a] sm:text-[46px] lg:text-[60px]">
+            <h3 className="font-sans text-[36px] font-bold leading-[1] text-[#062f3a] sm:text-[46px] lg:text-[60px]">
               Explore Our{" "}
               <span className="text-[#f78134]">Testimonials</span>
             </h3>
-
-            <p className="mt-5 max-w-[640px] text-[16px] leading-8 text-[#6a706f]">
-              Crafted in a more premium, editorial style, these testimonials put
-              real merchant trust at the center of the experience while preserving
-              the warmth and confidence of the Lionex brand.
-            </p>
           </div>          
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-3 grid-cols-2 xl:grid-cols-4">
           {videos.map((video, index) => (
             <article
               key={`${video.src}-${index}`}
