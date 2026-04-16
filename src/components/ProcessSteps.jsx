@@ -1,4 +1,4 @@
-import processImage from "../assets/images/shapes/process-one-map.png";
+import processImage from "../assets/images/shapes/process-one-map.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlane } from "@fortawesome/free-solid-svg-icons";
 

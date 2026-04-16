@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PageShell from "../components/PageShell";
 import ThmBtn from "../components/thmBtn";
-import rateCalculatorShape from "../assets/images/shapes/counter-one-bg-shape.png";
+import rateCalculatorShape from "../assets/images/shapes/counter-one-bg-shape.webp";
 
 const shipmentRates = {
   documents: 150,

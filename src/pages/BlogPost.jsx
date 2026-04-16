@@ -13,8 +13,8 @@ import { Link, useParams } from "react-router-dom";
 import PageShell from "../components/PageShell";
 import ThmBtn from "../components/thmBtn";
 import blogPosts from "../data/blogPosts";
-import commentOneImage from "../assets/images/blog/comment-1-1.jpg";
-import commentTwoImage from "../assets/images/blog/comment-1-2.jpg";
+import commentOneImage from "../assets/images/blog/comment-1-1.webp";
+import commentTwoImage from "../assets/images/blog/comment-1-2.webp";
 
 const postContentById = {
   "mastering-last-mile": {

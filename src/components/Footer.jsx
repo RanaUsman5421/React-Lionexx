@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import ThmBtn from "./thmBtn";
-import bgImage from "../assets/images/shapes/site-footer-shape-bg.png";
+import bgImage from "../assets/images/shapes/site-footer-shape-bg.webp";
 import footerLogo from "../assets/images/resources/Just White PNG-10.webp";
 import {Phone,Mail,EarthLock} from 'lucide-react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';

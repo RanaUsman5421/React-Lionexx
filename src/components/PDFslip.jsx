@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import ThmBtn from "./thmBtn";
-import leopardLogo from "../assets/images/resources/Leopards.png";
-import lionexLogo from "../assets/images/resources/Lionex Org+Black PNG-08.png";
+import leopardLogo from "../assets/images/resources/Leopards.webp";
+import lionexLogo from "../assets/images/resources/Lionex Org+Black PNG-08.webp";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PageShell from "./PageShell";

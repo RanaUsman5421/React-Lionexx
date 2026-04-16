@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ThmBtn from "./thmBtn";
-import sidebarLogo from "../assets/images/resources/logo-3.png";
+import sidebarLogo from "../assets/images/resources/logo-3.webp";
 
 const InfoSidebar = () => {
   const [isOpen, setIsOpen] = useState(false);

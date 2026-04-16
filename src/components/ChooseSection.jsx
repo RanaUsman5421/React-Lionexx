@@ -1,4 +1,4 @@
-import chooseMainImage from "../assets/images/choose/choose.png";
+import chooseMainImage from "../assets/images/choose/choose.webp";
 import waterIcon from "../assets/images/choose/water.svg";
 import airHeatIcon from "../assets/images/choose/airheat.svg";
 import radiatorIcon from "../assets/images/choose/fan.svg";

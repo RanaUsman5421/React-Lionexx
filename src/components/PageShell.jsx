@@ -1,4 +1,4 @@
-import pageHeaderBg from "../assets/images/backgrounds/page-header-bg.jpg";
+import pageHeaderBg from "../assets/images/backgrounds/page-header-bg.webp";
 
 const PageShell = ({ title, headerContent, children }) => {
   return (

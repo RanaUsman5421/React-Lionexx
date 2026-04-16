@@ -4,11 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlane } from "@fortawesome/free-solid-svg-icons";
 import "swiper/css";
 import "swiper/css/pagination";
-import servicesTwoImage from "../assets/images/services/services-2.png";
-import servicesFourImage from "../assets/images/services/services-4.png";
-import servicesFiveImage from "../assets/images/services/services-5.png";
-import servicesSixImage from "../assets/images/services/services-6.png";
-import servicesOneImage from "../assets/images/services/services-one-1-1.jpg";
+import servicesTwoImage from "../assets/images/services/services-2.webp";
+import servicesFourImage from "../assets/images/services/services-4.webp";
+import servicesFiveImage from "../assets/images/services/services-5.webp";
+import servicesSixImage from "../assets/images/services/services-6.webp";
+import servicesOneImage from "../assets/images/services/services-one-1-1.webp";
 
 const services = [
   {
@@ -128,9 +128,7 @@ const ServicesCarousel = () => {
             clickable: true,
             el: ".services-swiper-pagination",
             renderBullet: (_, className) =>
-              `<span class="${className} !mx-[8px] !my-0 !inline-flex !h-[18px] !w-[18px] items-center justify-center rounded-full  !p-[2px] opacity-100 transition-all duration-300 ease-out hover:bg-[rgba(247,129,52,0.35)] [&.swiper-pagination-bullet-active]:!h-[18px] [&.swiper-pagination-bullet-active]:!w-[56px]">
-                <span class="services-bullet-inner block h-full w-full rounded-full bg-[#062f3a] transition-all duration-300 ease-out"></span>
-              </span>`,
+              `<span class="${className} !mx-[8px] !my-0 !inline-flex !h-[18px] !w-[18px] items-center justify-center rounded-full border border-[#f78134]/40 bg-[#fff3ea] !p-[2px] opacity-100 transition-all duration-300 ease-out hover:border-[#f78134] hover:bg-[#ffe2cc] [&.swiper-pagination-bullet-active]:border-[#f78134] [&.swiper-pagination-bullet-active]:bg-[#f78134]"></span>`,
           }}
           breakpoints={{
             640: { slidesPerView: 2 },

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronRight } from "lucide-react";
-import logo from "../assets/images/resources/Robot Logo.png";
+import logo from "../assets/images/resources/Robot Logo.webp";
 import trackingPortalLogo from "../assets/images/resources/Tracking Portal PNG Logo.webp";
 import accountPortalLogo from "../assets/images/resources/My Account Portal PNG Logo.webp";
 

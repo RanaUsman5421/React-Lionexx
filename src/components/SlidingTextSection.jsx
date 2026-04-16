@@ -1,4 +1,4 @@
-import slidingTextIcon from "../assets/images/icon/sliding-text-icon-1.png";
+import slidingTextIcon from "../assets/images/icon/sliding-text-icon-1.webp";
 
 const slidingItems = [
   "AI POWERED",

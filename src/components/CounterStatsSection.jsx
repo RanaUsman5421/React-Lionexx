@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import counterBgIamge from '../assets/images/shapes/counter-one-bg-shape.png';
+import counterBgIamge from '../assets/images/shapes/counter-one-bg-shape.webp';
 
 const counters = [
   {

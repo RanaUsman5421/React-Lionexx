@@ -1,9 +1,9 @@
-import blogOneImage from "../assets/images/blog/blog-1-1.jpg";
-import blogTwoImage from "../assets/images/blog/blog-1-2.jpg";
-import blogThreeImage from "../assets/images/blog/blog-1-3.jpg";
-import authorOneImage from "../assets/images/blog/blog-one-author-img-1.jpg";
-import authorTwoImage from "../assets/images/blog/blog-one-author-img-2.jpg";
-import authorThreeImage from "../assets/images/blog/blog-one-author-img-3.jpg";
+import blogOneImage from "../assets/images/blog/blog-1-1.webp";
+import blogTwoImage from "../assets/images/blog/blog-1-2.webp";
+import blogThreeImage from "../assets/images/blog/blog-1-3.webp";
+import authorOneImage from "../assets/images/blog/blog-one-author-img-1.webp";
+import authorTwoImage from "../assets/images/blog/blog-one-author-img-2.webp";
+import authorThreeImage from "../assets/images/blog/blog-one-author-img-3.webp";
 
 const blogPosts = [
   {

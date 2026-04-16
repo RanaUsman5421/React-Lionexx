@@ -1,5 +1,5 @@
 import { useState } from "react";
-import aboutImage from "../assets/images/services/service-details-img-1.jpg";
+import aboutImage from "../assets/images/services/service-details-img-1.webp";
 import ThmBtn from "./thmBtn";
 
 const stats = [

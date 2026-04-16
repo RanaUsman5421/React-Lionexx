@@ -4,15 +4,15 @@ import { useState } from "react";
 import PageShell from "../components/PageShell";
 import { faqItems } from "../components/FAQSection";
 import pages from "../data/pages";
-import serviceDetailsImage1 from "../assets/images/services/service-details-img-1.jpg";
-import serviceDetailsImage2 from "../assets/images/services/service-details-img-2.jpg";
-import serviceDetailsImage3 from "../assets/images/services/service-details-img-3.jpg";
-import serviceDetailsImage4 from "../assets/images/services/service-details-img-4.jpg";
-import serviceDetailsImage5 from "../assets/images/services/service-details-img-5.jpg";
-import serviceDetailsImage6 from "../assets/images/services/service-details-img-6.jpg";
-import serviceDetailsBoxImage1 from "../assets/images/services/service-details-img-box-img-1.jpg";
-import serviceDetailsBoxImage2 from "../assets/images/services/service-details-img-box-img-2.jpg";
-import serviceDetailsSidebarImage from "../assets/images/services/service-details-sidebar-img.png";
+import serviceDetailsImage1 from "../assets/images/services/service-details-img-1.webp";
+import serviceDetailsImage2 from "../assets/images/services/service-details-img-2.webp";
+import serviceDetailsImage3 from "../assets/images/services/service-details-img-3.webp";
+import serviceDetailsImage4 from "../assets/images/services/service-details-img-4.webp";
+import serviceDetailsImage5 from "../assets/images/services/service-details-img-5.webp";
+import serviceDetailsImage6 from "../assets/images/services/service-details-img-6.webp";
+import serviceDetailsBoxImage1 from "../assets/images/services/service-details-img-box-img-1.webp";
+import serviceDetailsBoxImage2 from "../assets/images/services/service-details-img-box-img-2.webp";
+import serviceDetailsSidebarImage from "../assets/images/services/service-details-sidebar-img.webp";
 
 const serviceRoutes = [
   { key: "nation-wide", title: "Nationwide Delivery", path: "/nation-wide" },

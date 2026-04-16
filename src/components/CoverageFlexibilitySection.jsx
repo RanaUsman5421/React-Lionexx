@@ -1,5 +1,5 @@
-import bannerBg from "../assets/images/backgrounds/bannerbg.jpeg";
-import manImage from "../assets/images/resources/manImage.png";
+import bannerBg from "../assets/images/backgrounds/bannerbg.webp";
+import manImage from "../assets/images/resources/Image.webp";
 
 const stats = [
   {
@@ -70,7 +70,7 @@ const CoverageFlexibilitySection = () => {
               <img
                 src={manImage}
                 alt="Delivery man"
-                className="w-full hidden mg:block max-w-[460px] mb-[-50px] object-contain md:max-w-[620px] lg:max-w-[860px]"
+                className="w-full max-w-[460px] object-contain md:max-w-[620px] lg:max-w-[860px]"
               />
             </div>
 

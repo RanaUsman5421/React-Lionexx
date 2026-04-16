@@ -2,9 +2,9 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import ThmBtn from "./thmBtn";
-import mainVisual from "../assets/images/services/service-details-img-1.jpg";
+import mainVisual from "../assets/images/services/service-details-img-1.webp";
 import accentVisualOne from "../assets/images/resources/logistics.webp";
-import accentVisualTwo from "../assets/images/project/project-1-3.jpg";
+import accentVisualTwo from "../assets/images/project/project-1-3.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlane } from "@fortawesome/free-solid-svg-icons";
 
