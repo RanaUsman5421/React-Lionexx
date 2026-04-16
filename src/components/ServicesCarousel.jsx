@@ -32,7 +32,7 @@ const services = [
     icon: "icon-delivery-man",
     number: "03",
     title: "E-Commerce Delivery",
-    desc: "Secure warehouse facilities providing inventory storage, smart management systems, and efficient order.",
+    desc: "Secure warehouse facilities providing inventory storage, smart management systems, and efficient order throught Lionex Courier.",
     link: "/ecommerce-order-fullfillment",
   },
   {

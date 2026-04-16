@@ -147,34 +147,52 @@ const InfoSidebar = () => {
               <h4 className="mb-[5px] block font-['Rubik',sans-serif] text-[20px] font-medium uppercase leading-[30px] tracking-[0.05em] text-white">
                 Contact Info
               </h4>
-              <ul className="block pb-[22px]">
-                <li className="block text-white">
-                  <span className="mr-[6px] inline-block text-[#f78134]">
-                    <i className="icon-location1"></i>
-                  </span>
-                  88 broklyn street, New York
-                </li>
+              <ul className="flex gap-2 flex-col pb-[22px]">
                 <li className="mt-[15px] block text-white">
                   <span className="mr-[6px] inline-block text-[#f78134]">
                     <i className="icon-phone-call"></i>
                   </span>
                   <a
-                    href="tel:+923054447156"
+                    href="tel:+924235701892"
                     className="text-white transition-all duration-500 hover:text-[#f78134]"
                   >
-                    03054447156
+                    042-35701892
                   </a>
                 </li>
-                <li className="mt-[15px] block text-white">
+                <li className="block text-white">
                   <span className="mr-[6px] inline-block text-[#f78134]">
                     <i className="icon-email"></i>
                   </span>
                   <a
-                    href="mailto:hello@lionex.pk"
+                    href="mailto:info@lionexcourier.com"
                     className="text-white transition-all duration-500 hover:text-[#f78134]"
                   >
-                    hello@lionex.pk
+                    info@lionexcourier.com
                   </a>
+                </li>
+                <li className="flex items-center text-white">
+                  <span className="mr-[6px] inline-block text-[#f78134]">
+                    <i className="icon-location1"></i>
+                  </span>
+                  <p>
+                  Office 1: 1003F Lake City Meadows (Ex State Life Society) Lahore
+                  </p>
+                </li>
+                <li className="flex items-center text-white">
+                  <span className="mr-[6px] inline-block text-[#f78134]">
+                    <i className="icon-location1"></i>
+                  </span>
+                  <p>
+                  Office 2: 902B Faisal Town Lahore
+                  </p>
+                </li>
+                <li className="flex items-center text-white">
+                  <span className="mr-[6px] inline-block text-[#f78134]">
+                    <i className="icon-location1"></i>
+                  </span>
+                  <p>
+                  Office 3: 10 Faiz Road, Muslim Town, Lahore
+                  </p>
                 </li>
               </ul>
             </div>

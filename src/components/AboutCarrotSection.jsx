@@ -1,6 +1,7 @@
 import { useState } from "react";
 import aboutImage from "../assets/images/services/service-details-img-1.webp";
 import ThmBtn from "./thmBtn";
+import { Link } from "react-router-dom";
 
 const stats = [
   { value: "5+", label: "NationWide Branches" },
@@ -89,7 +90,9 @@ const AboutCarrotSection = () => {
               and an exceptional online shopping journey for every valued
               customer experience.
             </p>
-            <ThmBtn className="px-14">Exlplore Our Services</ThmBtn>
+            <ThmBtn as={Link} to="/services" className="px-14">
+              Explore Our Services
+            </ThmBtn>
           </div>
         </div>
 

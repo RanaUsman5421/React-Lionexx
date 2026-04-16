@@ -11,7 +11,7 @@ const contactCards = [
     content: (
       <>
         <h5>
-          <a href="tel:+923054447156">03054447156</a>
+          <a href="tel:+924235701892">042-35701892</a>
         </h5>
         <h5>
           <a href="tel:+923054447156">03054447156</a>
@@ -25,7 +25,7 @@ const contactCards = [
     content: (
       <>
         <h5>
-          <a href="mailto:hello@lionex.pk">hello@lionex.pk</a>
+          <a href="mailto:info@lionexcourier.com">info@lionexcourier.com</a>
         </h5>
         <h5>
           <a href="mailto:hello@lionex.pk">hello@lionex.pk</a>
@@ -38,15 +38,15 @@ const contactCards = [
     label: "Working Hours",
     content: (
       <h5>
-        Wednesday - Sunday
-        <br /> 7:00 AM - 5:00 PM
+        Monday - Saturday
+        <br /> 09:00 AM - 06:00 PM
       </h5>
     ),
   },
   {
     icon: faLocationDot,
     label: "Our Office Location",
-    content: <h5>1003F DHA Phase 5 <br /> Lahore Pakitan</h5>,
+    content: <h5>10 Faiz Road, Muslim Town, Lahore</h5>,
   },
 ];
 

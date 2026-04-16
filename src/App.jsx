@@ -170,7 +170,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen overflow-x-hidden bg-gray-50" onClickCapture={handleGlobalLinkClick}>
+      <div className="min-h-screen overflow-x-hidden" onClickCapture={handleGlobalLinkClick}>
         <Navbar />
         <MobileNav />
         <InfoSidebar />

@@ -70,7 +70,7 @@ const CoverageFlexibilitySection = () => {
               <img
                 src={manImage}
                 alt="Delivery man"
-                className="w-full max-w-[460px] object-contain md:max-w-[620px] lg:max-w-[860px]"
+                className="w-full hidden -mb-[40px] md:block max-w-[460px] object-contain md:max-w-[620px] lg:max-w-[860px]"
               />
             </div>
 

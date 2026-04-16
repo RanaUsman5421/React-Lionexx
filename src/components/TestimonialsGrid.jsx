@@ -3,7 +3,7 @@ import { faPlane } from "@fortawesome/free-solid-svg-icons";
 
 const videos = [
   {
-    src: "https://www.youtube.com/embed/ivqCKSdd-kE",
+    src: "https://youtube.com/embed/YeKKCS2mpdc",
     title:
       "Why Choose LionEx - Pakistan Smartest Courier System - LionEx Courier",
     name: "Ahsan Raza",
@@ -12,7 +12,7 @@ const videos = [
       "Lionex helped us make delivery communication feel faster, clearer, and far more dependable for customers.",
   },
   {
-    src: "https://www.youtube.com/embed/o_I0wcxj530",
+    src: "https://www.youtube.com/embed/3LyEMj7MLuI",
     title:
       "Customer Video Feedback for LionEx Courier - Pkaistan No 1 Ai Powered Courier Network",
     name: "Hira Khan",
@@ -21,7 +21,7 @@ const videos = [
       "The support experience and tracking visibility gave our team much more confidence during high-order periods.",
   },
   {
-    src: "https://www.youtube.com/embed/fipgaOI3lRc",
+    src: "https://www.youtube.com/embed/a6jaYXVnS1Y",
     title: "Customer Feedback about LionEx Courier",
     name: "Umair Shah",
     role: "D2C Founder",
@@ -29,7 +29,7 @@ const videos = [
       "From fulfillment coordination to final-mile reliability, the service has felt modern and operationally strong.",
   },
   {
-    src: "https://www.youtube.com/embed/ivqCKSdd-kE",
+    src: "https://www.youtube.com/embed/ivqCKSdd-kE?si=H49f_3aMWKC1gX1G",
     title:
       "Why Choose LionEx - Pakistan Smartest Courier System - LionEx Courier",
     name: "Sania Malik",

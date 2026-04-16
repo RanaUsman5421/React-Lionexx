@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import ThmBtn from "./thmBtn";
 import footerLogo from "../assets/images/resources/Just White PNG-10.webp";
 import trackingPortalLogo from "../assets/images/resources/Tracking Portal PNG Logo.webp";
@@ -34,6 +34,8 @@ const menuItems = [
 const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [expandedIndex, setExpandedIndex] = useState(null);
+  const navRef = useRef(null);
+  const location = useLocation();
 
   useEffect(() => {
     const handleToggle = (event) => {
@@ -68,10 +70,35 @@ const MobileNav = () => {
   }, []);
 
   useEffect(() => {
+    const navEl = navRef.current;
+    if (!navEl) return;
+
+    const handleTouchStart = (event) => {
+      if (!(event.target instanceof HTMLElement)) return;
+      if (event.target.closest("a, button")) {
+        const active = document.activeElement;
+        if (active instanceof HTMLElement && active !== document.body) {
+          active.blur();
+        }
+      }
+    };
+
+    navEl.addEventListener("touchstart", handleTouchStart, { passive: true });
+    return () => {
+      navEl.removeEventListener("touchstart", handleTouchStart);
+    };
+  }, []);
+
+  useEffect(() => {
     window.dispatchEvent(
       new CustomEvent("lionex-mobile-nav-state", { detail: { open: isOpen } })
     );
   }, [isOpen]);
+
+  useEffect(() => {
+    setIsOpen(false);
+    setExpandedIndex(null);
+  }, [location.pathname]);
 
   useEffect(() => {
     if (!isOpen) return undefined;
@@ -94,8 +121,17 @@ const MobileNav = () => {
     setExpandedIndex(null);
   };
 
+  const handlePortalClick = () => {
+    closeNav();
+    const active = document.activeElement;
+    if (active instanceof HTMLElement && active !== document.body) {
+      active.blur();
+    }
+  };
+
   return (
     <div
+      ref={navRef}
       className={`fixed left-0 top-0 z-[999] h-screen w-screen origin-left transition-all duration-300 ${
         isOpen
           ? "visible translate-x-0"
@@ -210,7 +246,8 @@ const MobileNav = () => {
         <div className="my-[18px] flex flex-wrap gap-[10px]">
           <Link
             to="/tracking"
-            className="shrink-0 px-5 py-2 bg-green-500 text-sm text-white transition-all duration-300 hover:bg-green-600 group relative z-[1] inline-flex cursor-pointer items-center gap-[7px] overflow-hidden rounded-sm border-0 align-middle text-[14px] font-normal capitalize leading-[17px] outline-none ease-linear appearance-none before:absolute before:left-0 before:top-0 before:-z-[1] before:h-0 before:w-1/2 before:bg-[#062f3a] before:opacity-0 before:invisible before:content-[''] before:transition-all before:duration-[400ms] before:ease-in-out after:absolute after:bottom-0 after:right-0 after:-z-[1] after:h-0 after:w-1/2 after:bg-[#062f3a] after:opacity-0 after:invisible after:content-[''] after:transition-all after:duration-[400ms] after:ease-in-out hover:text-white hover:before:h-full hover:before:w-full hover:before:visible hover:before:opacity-100 hover:after:h-full hover:after:w-full hover:after:visible hover:after:opacity-100"
+            onClickCapture={handlePortalClick}
+            className="shrink-0 px-5 py-2 bg-green-500 text-sm text-white transition-all duration-300 [@media(hover:hover)]:hover:bg-green-600 group relative z-[1] inline-flex cursor-pointer items-center gap-[7px] overflow-hidden rounded-sm border-0 align-middle text-[14px] font-normal capitalize leading-[17px] outline-none ease-linear appearance-none active:scale-[0.98] before:absolute before:left-0 before:top-0 before:-z-[1] before:h-0 before:w-1/2 before:bg-[#062f3a] before:opacity-0 before:invisible before:content-[''] before:transition-all before:duration-[400ms] before:ease-in-out after:absolute after:bottom-0 after:right-0 after:-z-[1] after:h-0 after:w-1/2 after:bg-[#062f3a] after:opacity-0 after:invisible after:content-[''] after:transition-all after:duration-[400ms] after:ease-in-out [@media(hover:hover)]:hover:text-white [@media(hover:hover)]:hover:before:h-full [@media(hover:hover)]:hover:before:w-full [@media(hover:hover)]:hover:before:visible [@media(hover:hover)]:hover:before:opacity-100 [@media(hover:hover)]:hover:after:h-full [@media(hover:hover)]:hover:after:w-full [@media(hover:hover)]:hover:after:visible [@media(hover:hover)]:hover:after:opacity-100"
           >
             <img
               src={trackingPortalLogo}
@@ -219,9 +256,10 @@ const MobileNav = () => {
             />
             Live Track
           </Link>
-          <Link
-            to="https://portal.lionexcourier.com/login"
-            className="shrink-0 text-sm group relative z-[1] inline-flex cursor-pointer items-center gap-[7px] overflow-hidden rounded-sm border-0 bg-[#f78134] pb-[5px] pl-[15px] pr-[8px] pt-[5px] align-middle text-[14px] font-normal capitalize leading-[17px] text-white outline-none transition-all duration-500 ease-linear appearance-none before:absolute before:left-0 before:top-0 before:-z-[1] before:h-0 before:w-1/2 before:bg-[#062f3a] before:opacity-0 before:invisible before:content-[''] before:transition-all before:duration-[400ms] before:ease-in-out after:absolute after:bottom-0 after:right-0 after:-z-[1] after:h-0 after:w-1/2 after:bg-[#062f3a] after:opacity-0 after:invisible after:content-[''] after:transition-all after:duration-[400ms] after:ease-in-out hover:text-white hover:before:h-full hover:before:w-full hover:before:visible hover:before:opacity-100 hover:after:h-full hover:after:w-full hover:after:visible hover:after:opacity-100"
+          <a
+            href="https://portal.lionexcourier.com/login"
+            onClickCapture={handlePortalClick}
+            className="shrink-0 text-sm group relative z-[1] inline-flex cursor-pointer items-center gap-[7px] overflow-hidden rounded-sm border-0 bg-[#f78134] pb-[5px] pl-[15px] pr-[8px] pt-[5px] align-middle text-[14px] font-normal capitalize leading-[17px] text-white outline-none transition-all duration-500 ease-linear appearance-none active:scale-[0.98] before:absolute before:left-0 before:top-0 before:-z-[1] before:h-0 before:w-1/2 before:bg-[#062f3a] before:opacity-0 before:invisible before:content-[''] before:transition-all before:duration-[400ms] before:ease-in-out after:absolute after:bottom-0 after:right-0 after:-z-[1] after:h-0 after:w-1/2 after:bg-[#062f3a] after:opacity-0 after:invisible after:content-[''] after:transition-all after:duration-[400ms] after:ease-in-out [@media(hover:hover)]:hover:text-white [@media(hover:hover)]:hover:before:h-full [@media(hover:hover)]:hover:before:w-full [@media(hover:hover)]:hover:before:visible [@media(hover:hover)]:hover:before:opacity-100 [@media(hover:hover)]:hover:after:h-full [@media(hover:hover)]:hover:after:w-full [@media(hover:hover)]:hover:after:visible [@media(hover:hover)]:hover:after:opacity-100"
           >
             <img
               src={accountPortalLogo}
@@ -229,26 +267,55 @@ const MobileNav = () => {
               className="w-5 h-5"
             />
             My Account
-          </Link>
+          </a>
         </div>
 
-        <ul className="my-5 list-none">
+        <ul className="my-5 flex flex-col gap-3 list-none">
           <li className="flex items-center text-[14px] font-medium text-white">
             <i className="fa fa-envelope mr-3"></i>
             <a
-              href="mailto:hello@lionex.pk"
+              href="mailto:info@lionexcourier.com"
               className="text-white transition-all duration-500 hover:text-[#f78134]"
             >
-              hello@lionex.pk
+              info@lionexcourier.com
             </a>
           </li>
-          <li className="mt-[15px] flex items-center text-[14px] font-medium text-white">
+          <li className="flex items-center text-[14px] font-medium text-white">
             <i className="fas fa-phone mr-3"></i>
             <a
-              href="tel:+923054447156"
+              href="tel:+924235701892"
               className="text-white transition-all duration-500 hover:text-[#f78134]"
             >
-              03054447156
+              042-35701892
+            </a>
+          </li>
+          <li className="flex items-center text-[14px] font-medium text-white">
+            <i className="fa fa-location-dot text-[20px] mr-3"></i>
+            <a
+              href="mailto:info@lionexcourier.com"
+              className="text-white transition-all duration-500 hover:text-[#f78134]"
+            >
+              <p>
+                Office 1: 1003F Lake City Meadows (Ex State Life Society) Lahore
+              </p>
+            </a>
+          </li><li className="flex items-center text-[14px] font-medium text-white">
+            <i className="fa fa-location-dot text-[20px] mr-3"></i>
+            <a
+              href="mailto:info@lionexcourier.com"
+              className="text-white transition-all duration-500 hover:text-[#f78134]"
+            >
+              <p>
+              Office 2: 902B Faisal Town Lahore
+              </p>
+            </a>
+          </li><li className="flex items-center text-[14px] font-medium text-white">
+            <i className="fa fa-location-dot text-[20px] mr-3"></i>
+            <a
+              href="mailto:info@lionexcourier.com"
+              className="text-white transition-all duration-500 hover:text-[#f78134]"
+            >
+              <p>Office 3: 10 Faiz Road, Muslim Town, Lahore</p>
             </a>
           </li>
         </ul>

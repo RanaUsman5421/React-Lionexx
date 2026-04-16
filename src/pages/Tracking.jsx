@@ -333,7 +333,7 @@ const Tracking = () => {
       subtitle="Enter your tracking number to see live updates."
     >
       <section className="bg-[linear-gradient(180deg,#fff8f4_0%,#ffffff_100%)] px-0 pb-[50px] pt-10 min-[768px]:pb-[60px] min-[768px]:pt-[50px] min-[992px]:pb-20 min-[992px]:pt-[60px]">
-        <div className="mx-auto mb-5 flex w-[40%] flex-col items-center justify-center gap-3 sm:items-center">
+        <div className="mx-auto mb-5 flex px-5 flex-col items-center justify-center gap-3 sm:items-center">
           <input
             type="text"
             placeholder="Enter tracking number"
@@ -345,7 +345,7 @@ const Tracking = () => {
                 handleTrack();
               }
             }}
-            className="h-[56px] w-full rounded-[6px] border border-gray-300 bg-white px-5 text-[15px] text-[#062f3a] outline-none placeholder:text-[#6a6c6e]"
+            className="h-[56px] w-full md:w-[40%] rounded-[6px] border border-gray-300 bg-white px-5 text-[15px] text-[#062f3a] outline-none placeholder:text-[#6a6c6e]"
           />
           <ThmBtn type="button" onClick={handleTrack}>
             {loading ? "Tracking..." : "Track Order"}

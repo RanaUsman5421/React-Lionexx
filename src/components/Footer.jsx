@@ -158,7 +158,7 @@ const Footer = () => {
                         <span className="icon-phone-call relative inline-block text-[16px] text-white transition-all duration-500 ease-[ease]"> </span>
                       </div>
                       <div className="relative block flex-1">
-                        <p className="text-white/80"><a href="tel:+923054447156" className="text-white/80 transition-all duration-500 ease-[ease] hover:text-[#f78134]">03054447156</a></p>
+                        <p className="text-white/80"><a href="tel:+923054447156" className="text-white/80 transition-all duration-500 ease-[ease] hover:text-[#f78134]">042-35701892</a></p>
                       </div>
                     </li>
                     <li className="group relative mt-[14px] flex items-center gap-[13px]">
@@ -167,7 +167,7 @@ const Footer = () => {
                       </div>
                       <div className="relative block flex-1">
                         <p className="text-white/80">
-                          <a href="mailto:hello@lionex.pk" className="text-white/80 transition-all duration-500 ease-[ease] hover:text-[#f78134]">hello@lionex.pk</a>
+                          <a href="mailto:hello@lionex.pk" className="text-white/80 transition-all duration-500 ease-[ease] hover:text-[#f78134]">info@lionexcourier.com</a>
                         </p>
                       </div>
                     </li>
@@ -176,9 +176,10 @@ const Footer = () => {
                         <span className="icon-location1 relative inline-block text-[16px] text-white transition-all duration-500 ease-[ease]"> </span>
                       </div>
                       <div className="relative block flex-1">
-                        <p className="text-white/80">1003F DHA Phase 5 Lahore</p>
+                        <p className="text-white/80">10 Faiz Road, Muslim Town, Lahore</p>
                       </div>
                     </li>
+                    
                   </ul>
                 </div>
               </div>

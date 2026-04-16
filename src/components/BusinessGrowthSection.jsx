@@ -204,7 +204,7 @@ const BusinessGrowthSection = () => {
   const visibleRows = comparisonRows.slice(0, visibleRowsCount);
 
   return (
-    <section className="bg-white px-2 py-5 my-5 min-[480px]:px-3 md:px-5">
+    <section className="bg-white px-2 min-[480px]:px-3 md:px-5">
       <div className="w-full">
         <div className="mb-8 text-center md:mb-10">
           <h2 className="font-['Rubik',sans-serif] text-[24px] font-bold leading-[1.08] tracking-[-0.03em] text-[#111111] min-[480px]:text-[28px] md:text-[38px] lg:text-[50px]">

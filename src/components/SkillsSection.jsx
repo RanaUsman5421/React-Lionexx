@@ -139,7 +139,7 @@ const SkillsSection = () => {
                 </div>
 
                 <div className="mt-10">
-                  <ThmBtn as={Link} to="/contact">
+                  <ThmBtn as={Link} to="https://portal.lionexcourier.com/login">
                     Book Your Parcel
                   </ThmBtn>
                 </div>

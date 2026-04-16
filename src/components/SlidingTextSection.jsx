@@ -26,7 +26,7 @@ const SlidingTextSection = () => {
         `}
       </style>
 
-      <section className="relative block overflow-hidden px-0 bg-white">
+      <section className="relative block py-5 my-5 overflow-hidden px-0 bg-white">
         <div className="relative block">
           <div className="group overflow-hidden">
             <ul className="m-0 flex w-max shrink-0 list-none items-center whitespace-nowrap [animation:sliding-text-marquee_30s_linear_infinite] group-hover:[animation-play-state:paused]">
