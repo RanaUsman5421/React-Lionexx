@@ -199,10 +199,10 @@ const Footer = () => {
                   <Link to="/contact" className="flex items-center text-[16px] text-white/80 transition-all duration-500 ease-[ease] hover:text-[#f78134]">Support</Link>
                 </li>
                 <li className="block xl:ml-[30px]">
-                  <Link to="/about" className="flex items-center text-[16px] text-white/80 transition-all duration-500 ease-[ease] hover:text-[#f78134]">Terms and Condition</Link>
+                  <Link to="/terms-conditions" className="flex items-center text-[16px] text-white/80 transition-all duration-500 ease-[ease] hover:text-[#f78134]">Terms and Condition</Link>
                 </li>
                 <li className="block xl:ml-[30px]">
-                  <Link to="/about" className="flex items-center text-[16px] text-white/80 transition-all duration-500 ease-[ease] hover:text-[#f78134]">Privacy and Policy</Link>
+                  <Link to="/privacy-policy" className="flex items-center text-[16px] text-white/80 transition-all duration-500 ease-[ease] hover:text-[#f78134]">Privacy and Policy</Link>
                 </li>
               </ul>
             </div>

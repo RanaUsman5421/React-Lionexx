@@ -27,6 +27,8 @@ const SignUp = lazy(() => import("./pages/SignUp"));
 const StaticPage = lazy(() => import("./pages/StaticPage"));
 const Testimonials = lazy(() => import("./pages/Testimonials"));
 const Tracking = lazy(() => import("./pages/Tracking"));
+const TermsConditions = lazy(() => import("./pages/TermsConditions"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -70,6 +72,8 @@ function AppRoutes() {
         <Route path="/login" element={<Login />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/rateCalculator" element={<RateCalculator />} />
+        <Route path="/terms-conditions" element={<TermsConditions />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/pricing" element={<StaticPage pageKey="pricing" />} />
         <Route path="/projects" element={<StaticPage pageKey="projects" />} />
         <Route
